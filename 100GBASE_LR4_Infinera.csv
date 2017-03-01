@@ -1,0 +1,1155 @@
+22.09.2016 16:43:58
+CFP Host: MSA
+Address, Hex, Decimal, ASCII, MSA Description
+CFP NVR 1  32768(8000h),0x0E,14,,Module Identifier
+CFP NVR 1  32769(8001h),0x95,149,?,Extended Identifier
+CFP NVR 1  32770(8002h),0x07,7,,Connector Type Code
+CFP NVR 1  32771(8003h),0x01,1,,Ethernet Application Code
+CFP NVR 1  32772(8004h),0x00,00,,Fiber Channel Application Code
+CFP NVR 1  32773(8005h),0x00,00,,Copper Link Application Code
+CFP NVR 1  32774(8006h),0x00,00,,SONET/SDH Application Code
+CFP NVR 1  32775(8007h),0x00,00,,OTN Application Code
+CFP NVR 1  32776(8008h),0x08,8,,Additional Capable Rates Supported
+CFP NVR 1  32777(8009h),0x4A,74,J,Number of Lanes Supported
+CFP NVR 1  32778(800Ah),0x11,17,,Media Properties
+CFP NVR 1  32779(800Bh),0x81,129,?,Maximum Network Lane Bit Rate
+CFP NVR 1  32780(800Ch),0x34,52,4,Maximum Host Lane Bit Rate
+CFP NVR 1  32781(800Dh),0x0A,10, ,Maximum Single Mode Optical Fiber Length
+CFP NVR 1  32782(800Eh),0x00,00,,Maximum Multi-Mode Optical Fiber Length
+CFP NVR 1  32783(800Fh),0x00,00,,Maximum Copper Cable Length
+CFP NVR 1  32784(8010h),0x01,1,,Transmitter Spectral Characteristics 1
+CFP NVR 1  32785(8011h),0x04,4,,Transmitter Spectral Characteristics 2
+CFP NVR 1  32786(8012h),0xCA,202,?,Minimum Wavelength per Active Fiber
+CFP NVR 1  32787(8013h),0x45,69,E,Minimum Wavelength per Active Fiber
+CFP NVR 1  32788(8014h),0xCC,204,?,Maximum Wavelength per Active Fiber
+CFP NVR 1  32789(8015h),0xB8,184,?,Maximum Wavelength per Active Fiber
+CFP NVR 1  32790(8016h),0x08,8,,Maximum per Lane Optical Width
+CFP NVR 1  32791(8017h),0x34,52,4,Maximum per Lane Optical Width
+CFP NVR 1  32792(8018h),0x21,33,!,Device Technology 1
+CFP NVR 1  32793(8019h),0x44,68,D,Device Technology 2
+CFP NVR 1  32794(801Ah),0x40,64,@,Signal Code
+CFP NVR 1  32795(801Bh),0x70,112,p,Maximum Total Optical Output Power per Connector
+CFP NVR 1  32796(801Ch),0x1C,28,,Maximum Optical Input Power per Network Lane
+CFP NVR 1  32797(801Dh),0x73,115,s,Maximum Power Consumption
+CFP NVR 1  32798(801Eh),0x64,100,d,Maximum Power Consumption in Low Power Mode
+CFP NVR 1  32799(801Fh),0x46,70,F,Maximum Operating Case Temp Range
+CFP NVR 1  32800(8020h),0x00,00,,Minimum Operating Case Temp Range
+CFP NVR 1  32801(8021h),0x46,70,F,Vendor Name
+CFP NVR 1  32802(8022h),0x49,73,I,Vendor Name
+CFP NVR 1  32803(8023h),0x4E,78,N,Vendor Name
+CFP NVR 1  32804(8024h),0x49,73,I,Vendor Name
+CFP NVR 1  32805(8025h),0x53,83,S,Vendor Name
+CFP NVR 1  32806(8026h),0x41,65,A,Vendor Name
+CFP NVR 1  32807(8027h),0x52,82,R,Vendor Name
+CFP NVR 1  32808(8028h),0x20,32, ,Vendor Name
+CFP NVR 1  32809(8029h),0x43,67,C,Vendor Name
+CFP NVR 1  32810(802Ah),0x4F,79,O,Vendor Name
+CFP NVR 1  32811(802Bh),0x52,82,R,Vendor Name
+CFP NVR 1  32812(802Ch),0x50,80,P,Vendor Name
+CFP NVR 1  32813(802Dh),0x2E,46,.,Vendor Name
+CFP NVR 1  32814(802Eh),0x20,32, ,Vendor Name
+CFP NVR 1  32815(802Fh),0x20,32, ,Vendor Name
+CFP NVR 1  32816(8030h),0x20,32, ,Vendor Name
+CFP NVR 1  32817(8031h),0x00,00,,Vendor OUI
+CFP NVR 1  32818(8032h),0x90,144,?,Vendor OUI
+CFP NVR 1  32819(8033h),0x65,101,e,Vendor OUI
+CFP NVR 1  32820(8034h),0x46,70,F,Vendor Part Number
+CFP NVR 1  32821(8035h),0x54,84,T,Vendor Part Number
+CFP NVR 1  32822(8036h),0x4C,76,L,Vendor Part Number
+CFP NVR 1  32823(8037h),0x43,67,C,Vendor Part Number
+CFP NVR 1  32824(8038h),0x31,49,1,Vendor Part Number
+CFP NVR 1  32825(8039h),0x31,49,1,Vendor Part Number
+CFP NVR 1  32826(803Ah),0x38,56,8,Vendor Part Number
+CFP NVR 1  32827(803Bh),0x32,50,2,Vendor Part Number
+CFP NVR 1  32828(803Ch),0x52,82,R,Vendor Part Number
+CFP NVR 1  32829(803Dh),0x44,68,D,Vendor Part Number
+CFP NVR 1  32830(803Eh),0x4E,78,N,Vendor Part Number
+CFP NVR 1  32831(803Fh),0x4C,76,L,Vendor Part Number
+CFP NVR 1  32832(8040h),0x2D,45,-,Vendor Part Number
+CFP NVR 1  32833(8041h),0x4E,78,N,Vendor Part Number
+CFP NVR 1  32834(8042h),0x46,70,F,Vendor Part Number
+CFP NVR 1  32835(8043h),0x20,32, ,Vendor Part Number
+CFP NVR 1  32836(8044h),0x43,67,C,Vendor Serial Number
+CFP NVR 1  32837(8045h),0x51,81,Q,Vendor Serial Number
+CFP NVR 1  32838(8046h),0x38,56,8,Vendor Serial Number
+CFP NVR 1  32839(8047h),0x30,48,0,Vendor Serial Number
+CFP NVR 1  32840(8048h),0x30,48,0,Vendor Serial Number
+CFP NVR 1  32841(8049h),0x30,48,0,Vendor Serial Number
+CFP NVR 1  32842(804Ah),0x35,53,5,Vendor Serial Number
+CFP NVR 1  32843(804Bh),0x20,32, ,Vendor Serial Number
+CFP NVR 1  32844(804Ch),0x20,32, ,Vendor Serial Number
+CFP NVR 1  32845(804Dh),0x20,32, ,Vendor Serial Number
+CFP NVR 1  32846(804Eh),0x20,32, ,Vendor Serial Number
+CFP NVR 1  32847(804Fh),0x20,32, ,Vendor Serial Number
+CFP NVR 1  32848(8050h),0x20,32, ,Vendor Serial Number
+CFP NVR 1  32849(8051h),0x20,32, ,Vendor Serial Number
+CFP NVR 1  32850(8052h),0x20,32, ,Vendor Serial Number
+CFP NVR 1  32851(8053h),0x20,32, ,Vendor Serial Number
+CFP NVR 1  32852(8054h),0x32,50,2,Date Code
+CFP NVR 1  32853(8055h),0x30,48,0,Date Code
+CFP NVR 1  32854(8056h),0x31,49,1,Date Code
+CFP NVR 1  32855(8057h),0x33,51,3,Date Code
+CFP NVR 1  32856(8058h),0x30,48,0,Date Code
+CFP NVR 1  32857(8059h),0x38,56,8,Date Code
+CFP NVR 1  32858(805Ah),0x32,50,2,Date Code
+CFP NVR 1  32859(805Bh),0x37,55,7,Date Code
+CFP NVR 1  32860(805Ch),0x30,48,0,Lot Code
+CFP NVR 1  32861(805Dh),0x30,48,0,Lot Code
+CFP NVR 1  32862(805Eh),0x57,87,W,CLEI Code
+CFP NVR 1  32863(805Fh),0x4F,79,O,CLEI Code
+CFP NVR 1  32864(8060h),0x54,84,T,CLEI Code
+CFP NVR 1  32865(8061h),0x52,82,R,CLEI Code
+CFP NVR 1  32866(8062h),0x43,67,C,CLEI Code
+CFP NVR 1  32867(8063h),0x4B,75,K,CLEI Code
+CFP NVR 1  32868(8064h),0x37,55,7,CLEI Code
+CFP NVR 1  32869(8065h),0x4C,76,L,CLEI Code
+CFP NVR 1  32870(8066h),0x41,65,A,CLEI Code
+CFP NVR 1  32871(8067h),0x41,65,A,CLEI Code
+CFP NVR 1  32872(8068h),0x0E,14,,CFP MSA Hardware Specification Revision Number
+CFP NVR 1  32873(8069h),0x0E,14,,CFP MSA Management Interface Specification Revision Number
+CFP NVR 1  32874(806Ah),0x02,2,,Module Hardware Version Number
+CFP NVR 1  32875(806Bh),0x00,00,,Module Hardware Version Number
+CFP NVR 1  32876(806Ch),0x02,2,,Module Firmware Version Number
+CFP NVR 1  32877(806Dh),0x07,7,,Module Firmware Version Number
+CFP NVR 1  32878(806Eh),0x0C,12,,Digital Diagnostic Monitoring Type
+CFP NVR 1  32879(806Fh),0x03,3,,Digital Diagnostic Monitoring Capability 1
+CFP NVR 1  32880(8070h),0x0F,15,,Digital Diagnostic Monitoring Capability 2
+CFP NVR 1  32881(8071h),0x68,104,h,Module Enhanced Options
+CFP NVR 1  32882(8072h),0x0F,15,,Maximum High-Power-up Time
+CFP NVR 1  32883(8073h),0x01,1,,Maximum TX-Turn-on Time
+CFP NVR 1  32884(8074h),0x01,1,,Host Lane Signal Spec
+CFP NVR 1  32885(8075h),0x00,00,,Heat Sink Type
+CFP NVR 1  32886(8076h),0x64,100,d,Maximum TX-Turn-off Time
+CFP NVR 1  32887(8077h),0x01,1,,Maximum High-Power-down Time
+CFP NVR 1  32888(8078h),0x07,7,,Module Enhanced Options 2
+CFP NVR 1  32889(8079h),0x01,1,,Transmitter Monitor Clock Options
+CFP NVR 1  32890(807Ah),0xF1,241,?,Receiver Monitor Clock Options
+CFP NVR 1  32891(807Bh),0x00,00,,Reserved
+CFP NVR 1  32892(807Ch),0x00,00,,Reserved
+CFP NVR 1  32893(807Dh),0x00,00,,Reserved
+CFP NVR 1  32894(807Eh),0x00,00,,Reserved
+CFP NVR 1  32895(807Fh),0x7B,123,{,CFP NVR 1 Checksum
+CFP NVR 2  32896(8080h),0x4E,78,N,Transceiver Temp High Alarm Threshold
+CFP NVR 2  32897(8081h),0x00,00,,Transceiver Temp High Alarm Threshold
+CFP NVR 2  32898(8082h),0x4B,75,K,Transceiver Temp High Warning Threshold
+CFP NVR 2  32899(8083h),0x00,00,,Transceiver Temp High Warning Threshold
+CFP NVR 2  32900(8084h),0xFB,251,?,Transceiver Temp Low Warning Threshold
+CFP NVR 2  32901(8085h),0x00,00,,Transceiver Temp Low Warning Threshold
+CFP NVR 2  32902(8086h),0xF8,248,?,Transceiver Temp Low Alarm Threshold
+CFP NVR 2  32903(8087h),0x00,00,,Transceiver Temp Low Alarm Threshold
+CFP NVR 2  32904(8088h),0x87,135,?,VCC High Alarm Threshold
+CFP NVR 2  32905(8089h),0x5A,90,Z,VCC High Alarm Threshold
+CFP NVR 2  32906(808Ah),0x86,134,?,VCC High Warning Threshold
+CFP NVR 2  32907(808Bh),0x10,16,,VCC High Warning Threshold
+CFP NVR 2  32908(808Ch),0x7B,123,{,VCC Low Warning Threshold
+CFP NVR 2  32909(808Dh),0xC0,192,?,VCC Low Warning Threshold
+CFP NVR 2  32910(808Eh),0x7A,122,z,VCC Low Alarm Threshold
+CFP NVR 2  32911(808Fh),0x76,118,v,VCC Low Alarm Threshold
+CFP NVR 2  32912(8090h),0x00,00,,SOA Bias Current High Alarm Threshold
+CFP NVR 2  32913(8091h),0x00,00,,SOA Bias Current High Alarm Threshold
+CFP NVR 2  32914(8092h),0x00,00,,SOA Bias Current High Warning Threshold
+CFP NVR 2  32915(8093h),0x00,00,,SOA Bias Current High Warning Threshold
+CFP NVR 2  32916(8094h),0x00,00,,SOA Bias Current Low Warning Threshold
+CFP NVR 2  32917(8095h),0x00,00,,SOA Bias Current Low Warning Threshold
+CFP NVR 2  32918(8096h),0x00,00,,SOA Bias Current Low Alarm Threshold
+CFP NVR 2  32919(8097h),0x00,00,,SOA Bias Current Low Alarm Threshold
+CFP NVR 2  32920(8098h),0x00,00,,Auxiliary 1 Monitor High Alarm Threshold
+CFP NVR 2  32921(8099h),0x00,00,,Auxiliary 1 Monitor High Alarm Threshold
+CFP NVR 2  32922(809Ah),0x00,00,,Auxiliary 1 Monitor High Warning Threshold
+CFP NVR 2  32923(809Bh),0x00,00,,Auxiliary 1 Monitor High Warning Threshold
+CFP NVR 2  32924(809Ch),0x00,00,,Auxiliary 1 Monitor Low Warning Threshold
+CFP NVR 2  32925(809Dh),0x00,00,,Auxiliary 1 Monitor Low Warning Threshold
+CFP NVR 2  32926(809Eh),0x00,00,,Auxiliary 1 Monitor Low Alarm Threshold
+CFP NVR 2  32927(809Fh),0x00,00,,Auxiliary 1 Monitor Low Alarm Threshold
+CFP NVR 2  32928(80A0h),0x00,00,,Auxiliary 2 Monitor High Alarm Threshold
+CFP NVR 2  32929(80A1h),0x00,00,,Auxiliary 2 Monitor High Alarm Threshold
+CFP NVR 2  32930(80A2h),0x00,00,,Auxiliary 2 Monitor High Warning Threshold
+CFP NVR 2  32931(80A3h),0x00,00,,Auxiliary 2 Monitor High Warning Threshold
+CFP NVR 2  32932(80A4h),0x00,00,,Auxiliary 2 Monitor Low Warning Threshold
+CFP NVR 2  32933(80A5h),0x00,00,,Auxiliary 2 Monitor Low Warning Threshold
+CFP NVR 2  32934(80A6h),0x00,00,,Auxiliary 2 Monitor Low Alarm Threshold
+CFP NVR 2  32935(80A7h),0x00,00,,Auxiliary 2 Monitor Low Alarm Threshold
+CFP NVR 2  32936(80A8h),0xEA,234,?,Laser Bias Current High Alarm Threshold
+CFP NVR 2  32937(80A9h),0x60,96,`,Laser Bias Current High Alarm Threshold
+CFP NVR 2  32938(80AAh),0xE0,224,?,Laser Bias Current High Warning Threshold
+CFP NVR 2  32939(80ABh),0x9C,156,?,Laser Bias Current High Warning Threshold
+CFP NVR 2  32940(80ACh),0x44,68,D,Laser Bias Current Low WarningThreshold
+CFP NVR 2  32941(80ADh),0x5C,92,\,Laser Bias Current Low WarningThreshold
+CFP NVR 2  32942(80AEh),0x3A,58,:,Laser Bias Current Low Alarm Threshold
+CFP NVR 2  32943(80AFh),0x98,152,?,Laser Bias Current Low Alarm Threshold
+CFP NVR 2  32944(80B0h),0x6E,110,n,Laser Output Power High Alarm Threshold
+CFP NVR 2  32945(80B1h),0x18,24,,Laser Output Power High Alarm Threshold
+CFP NVR 2  32946(80B2h),0x62,98,b,Laser Output Power High Warning Threshold
+CFP NVR 2  32947(80B3h),0x1F,31,,Laser Output Power High Warning Threshold
+CFP NVR 2  32948(80B4h),0x10,16,,Laser Output Power Low Warning Threshold
+CFP NVR 2  32949(80B5h),0x49,73,I,Laser Output Power Low Warning Threshold
+CFP NVR 2  32950(80B6h),0x0E,14,,Laser Output Power Low Alarm Threshold
+CFP NVR 2  32951(80B7h),0x83,131,?,Laser Output Power Low Alarm Threshold
+CFP NVR 2  32952(80B8h),0x39,57,9,Laser Temperature High Alarm Threshold
+CFP NVR 2  32953(80B9h),0x00,00,,Laser Temperature High Alarm Threshold
+CFP NVR 2  32954(80BAh),0x37,55,7,Laser Temperature High WarningThreshold
+CFP NVR 2  32955(80BBh),0x00,00,,Laser Temperature High Warning Threshold
+CFP NVR 2  32956(80BCh),0x1B,27,,Laser Temperature Low Warning Threshold
+CFP NVR 2  32957(80BDh),0x00,00,,Laser Temperature Low Warning Threshold
+CFP NVR 2  32958(80BEh),0x19,25,,Laser Temperature Low Alarm Threshold
+CFP NVR 2  32959(80BFh),0x00,00,,Laser Temperature Low Alarm Threshold
+CFP NVR 2  32960(80C0h),0x6E,110,n,Receive Optical Power High Alarm Threshold
+CFP NVR 2  32961(80C1h),0x18,24,,Receive Optical Power High Alarm Threshold
+CFP NVR 2  32962(80C2h),0x62,98,b,Receive Optical Power High Warning Threshold
+CFP NVR 2  32963(80C3h),0x1F,31,,Receive Optical Power High Warning Threshold
+CFP NVR 2  32964(80C4h),0x01,1,,Receive Optical Power Low Warning Threshold
+CFP NVR 2  32965(80C5h),0xF5,245,?,Receive Optical Power Low Warning Threshold
+CFP NVR 2  32966(80C6h),0x00,00,,Receive Optical Power Low Alarm Threshold
+CFP NVR 2  32967(80C7h),0xFB,251,?,Receive Optical Power Low Alarm Threshold
+CFP NVR 2  32968(80C8h),0x00,00,,Reserved
+CFP NVR 2  32969(80C9h),0x00,00,,Reserved
+CFP NVR 2  32970(80CAh),0x00,00,,Reserved
+CFP NVR 2  32971(80CBh),0x00,00,,Reserved
+CFP NVR 2  32972(80CCh),0x00,00,,Reserved
+CFP NVR 2  32973(80CDh),0x00,00,,Reserved
+CFP NVR 2  32974(80CEh),0x00,00,,Reserved
+CFP NVR 2  32975(80CFh),0x00,00,,Reserved
+CFP NVR 2  32976(80D0h),0x00,00,,Reserved
+CFP NVR 2  32977(80D1h),0x00,00,,Reserved
+CFP NVR 2  32978(80D2h),0x00,00,,Reserved
+CFP NVR 2  32979(80D3h),0x00,00,,Reserved
+CFP NVR 2  32980(80D4h),0x00,00,,Reserved
+CFP NVR 2  32981(80D5h),0x00,00,,Reserved
+CFP NVR 2  32982(80D6h),0x00,00,,Reserved
+CFP NVR 2  32983(80D7h),0x00,00,,Reserved
+CFP NVR 2  32984(80D8h),0x00,00,,Reserved
+CFP NVR 2  32985(80D9h),0x00,00,,Reserved
+CFP NVR 2  32986(80DAh),0x00,00,,Reserved
+CFP NVR 2  32987(80DBh),0x00,00,,Reserved
+CFP NVR 2  32988(80DCh),0x00,00,,Reserved
+CFP NVR 2  32989(80DDh),0x00,00,,Reserved
+CFP NVR 2  32990(80DEh),0x00,00,,Reserved
+CFP NVR 2  32991(80DFh),0x00,00,,Reserved
+CFP NVR 2  32992(80E0h),0x00,00,,Reserved
+CFP NVR 2  32993(80E1h),0x00,00,,Reserved
+CFP NVR 2  32994(80E2h),0x00,00,,Reserved
+CFP NVR 2  32995(80E3h),0x00,00,,Reserved
+CFP NVR 2  32996(80E4h),0x00,00,,Reserved
+CFP NVR 2  32997(80E5h),0x00,00,,Reserved
+CFP NVR 2  32998(80E6h),0x00,00,,Reserved
+CFP NVR 2  32999(80E7h),0x00,00,,Reserved
+CFP NVR 2  33000(80E8h),0x00,00,,Reserved
+CFP NVR 2  33001(80E9h),0x00,00,,Reserved
+CFP NVR 2  33002(80EAh),0x00,00,,Reserved
+CFP NVR 2  33003(80EBh),0x00,00,,Reserved
+CFP NVR 2  33004(80ECh),0x00,00,,Reserved
+CFP NVR 2  33005(80EDh),0x00,00,,Reserved
+CFP NVR 2  33006(80EEh),0x00,00,,Reserved
+CFP NVR 2  33007(80EFh),0x00,00,,Reserved
+CFP NVR 2  33008(80F0h),0x00,00,,Reserved
+CFP NVR 2  33009(80F1h),0x00,00,,Reserved
+CFP NVR 2  33010(80F2h),0x00,00,,Reserved
+CFP NVR 2  33011(80F3h),0x00,00,,Reserved
+CFP NVR 2  33012(80F4h),0x00,00,,Reserved
+CFP NVR 2  33013(80F5h),0x00,00,,Reserved
+CFP NVR 2  33014(80F6h),0x00,00,,Reserved
+CFP NVR 2  33015(80F7h),0x00,00,,Reserved
+CFP NVR 2  33016(80F8h),0x00,00,,Reserved
+CFP NVR 2  33017(80F9h),0x00,00,,Reserved
+CFP NVR 2  33018(80FAh),0x00,00,,Reserved
+CFP NVR 2  33019(80FBh),0x00,00,,Reserved
+CFP NVR 2  33020(80FCh),0x00,00,,Reserved
+CFP NVR 2  33021(80FDh),0x00,00,,Reserved
+CFP NVR 2  33022(80FEh),0x00,00,,Reserved
+CFP NVR 2  33023(80FFh),0xF3,243,?,CFP NVR 2 Checksum
+CFP NVR 3  33024(8100h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33025(8101h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33026(8102h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33027(8103h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33028(8104h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33029(8105h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33030(8106h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33031(8107h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33032(8108h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33033(8109h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33034(810Ah),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33035(810Bh),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33036(810Ch),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33037(810Dh),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33038(810Eh),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33039(810Fh),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33040(8110h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33041(8111h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33042(8112h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33043(8113h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33044(8114h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33045(8115h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33046(8116h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33047(8117h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33048(8118h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33049(8119h),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33050(811Ah),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33051(811Bh),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33052(811Ch),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33053(811Dh),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33054(811Eh),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33055(811Fh),0x00,00,,RX Sensitivity Spec for networklanes 0 ~ 15
+CFP NVR 3  33056(8120h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33057(8121h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33058(8122h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33059(8123h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33060(8124h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33061(8125h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33062(8126h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33063(8127h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33064(8128h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33065(8129h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33066(812Ah),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33067(812Bh),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33068(812Ch),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33069(812Dh),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33070(812Eh),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33071(812Fh),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33072(8130h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33073(8131h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33074(8132h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33075(8133h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33076(8134h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33077(8135h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33078(8136h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33079(8137h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33080(8138h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33081(8139h),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33082(813Ah),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33083(813Bh),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33084(813Ch),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33085(813Dh),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33086(813Eh),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33087(813Fh),0x00,00,,TX Power Spec for network lanes 0 ~ 15
+CFP NVR 3  33088(8140h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33089(8141h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33090(8142h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33091(8143h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33092(8144h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33093(8145h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33094(8146h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33095(8147h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33096(8148h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33097(8149h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33098(814Ah),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33099(814Bh),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33100(814Ch),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33101(814Dh),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33102(814Eh),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33103(814Fh),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33104(8150h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33105(8151h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33106(8152h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33107(8153h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33108(8154h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33109(8155h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33110(8156h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33111(8157h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33112(8158h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33113(8159h),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33114(815Ah),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33115(815Bh),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33116(815Ch),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33117(815Dh),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33118(815Eh),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33119(815Fh),0x00,00,,Measured ER for network lanes 0 ~ 15
+CFP NVR 3  33120(8160h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33121(8161h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33122(8162h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33123(8163h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33124(8164h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33125(8165h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33126(8166h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33127(8167h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33128(8168h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33129(8169h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33130(816Ah),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33131(816Bh),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33132(816Ch),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33133(816Dh),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33134(816Eh),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33135(816Fh),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33136(8170h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33137(8171h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33138(8172h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33139(8173h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33140(8174h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33141(8175h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33142(8176h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33143(8177h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33144(8178h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33145(8179h),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33146(817Ah),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33147(817Bh),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33148(817Ch),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33149(817Dh),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33150(817Eh),0x00,00,,Path Penalty for network lanes 0 ~ 15
+CFP NVR 3  33151(817Fh),0x00,00,,Path Penalty for network lanes 0 ~ 15
+User NVR 1  34816(8800h),0x00,00,,
+User NVR 1  34817(8801h),0x00,00,,
+User NVR 1  34818(8802h),0x00,00,,
+User NVR 1  34819(8803h),0x00,00,,
+User NVR 1  34820(8804h),0x00,00,,
+User NVR 1  34821(8805h),0x00,00,,
+User NVR 1  34822(8806h),0x00,00,,
+User NVR 1  34823(8807h),0x00,00,,
+User NVR 1  34824(8808h),0x34,52,4,
+User NVR 1  34825(8809h),0x03,3,,
+User NVR 1  34826(880Ah),0x74,116,t,
+User NVR 1  34827(880Bh),0x00,00,,
+User NVR 1  34828(880Ch),0x00,00,,
+User NVR 1  34829(880Dh),0x00,00,,
+User NVR 1  34830(880Eh),0x00,00,,
+User NVR 1  34831(880Fh),0x00,00,,
+User NVR 1  34832(8810h),0x30,48,0,
+User NVR 1  34833(8811h),0x30,48,0,
+User NVR 1  34834(8812h),0x30,48,0,
+User NVR 1  34835(8813h),0x30,48,0,
+User NVR 1  34836(8814h),0x30,48,0,
+User NVR 1  34837(8815h),0x43,67,C,
+User NVR 1  34838(8816h),0x51,81,Q,
+User NVR 1  34839(8817h),0x38,56,8,
+User NVR 1  34840(8818h),0x30,48,0,
+User NVR 1  34841(8819h),0x30,48,0,
+User NVR 1  34842(881Ah),0x30,48,0,
+User NVR 1  34843(881Bh),0x35,53,5,
+User NVR 1  34844(881Ch),0xA1,161,?,
+User NVR 1  34845(881Dh),0x00,00,,
+User NVR 1  34846(881Eh),0x35,53,5,
+User NVR 1  34847(881Fh),0x20,32, ,
+User NVR 1  34848(8820h),0x13,19,,
+User NVR 1  34849(8821h),0x13,19,,
+User NVR 1  34850(8822h),0x00,00,,
+User NVR 1  34851(8823h),0x25,37,%,
+User NVR 1  34852(8824h),0x00,00,,
+User NVR 1  34853(8825h),0x01,1,,
+User NVR 1  34854(8826h),0x57,87,W,
+User NVR 1  34855(8827h),0x4F,79,O,
+User NVR 1  34856(8828h),0x54,84,T,
+User NVR 1  34857(8829h),0x52,82,R,
+User NVR 1  34858(882Ah),0x43,67,C,
+User NVR 1  34859(882Bh),0x4B,75,K,
+User NVR 1  34860(882Ch),0x37,55,7,
+User NVR 1  34861(882Dh),0x4C,76,L,
+User NVR 1  34862(882Eh),0x41,65,A,
+User NVR 1  34863(882Fh),0x41,65,A,
+User NVR 1  34864(8830h),0x18,24,,
+User NVR 1  34865(8831h),0x02,2,,
+User NVR 1  34866(8832h),0x61,97,a,
+User NVR 1  34867(8833h),0x54,84,T,
+User NVR 1  34868(8834h),0x4F,79,O,
+User NVR 1  34869(8835h),0x4D,77,M,
+User NVR 1  34870(8836h),0x2D,45,-,
+User NVR 1  34871(8837h),0x31,49,1,
+User NVR 1  34872(8838h),0x30,48,0,
+User NVR 1  34873(8839h),0x30,48,0,
+User NVR 1  34874(883Ah),0x47,71,G,
+User NVR 1  34875(883Bh),0x2D,45,-,
+User NVR 1  34876(883Ch),0x4C,76,L,
+User NVR 1  34877(883Dh),0x52,82,R,
+User NVR 1  34878(883Eh),0x34,52,4,
+User NVR 1  34879(883Fh),0x20,32, ,
+User NVR 1  34880(8840h),0x20,32, ,
+User NVR 1  34881(8841h),0x20,32, ,
+User NVR 1  34882(8842h),0x20,32, ,
+User NVR 1  34883(8843h),0x01,1,,
+User NVR 1  34884(8844h),0x00,00,,
+User NVR 1  34885(8845h),0x00,00,,
+User NVR 1  34886(8846h),0x00,00,,
+User NVR 1  34887(8847h),0x00,00,,
+User NVR 1  34888(8848h),0x00,00,,
+User NVR 1  34889(8849h),0x00,00,,
+User NVR 1  34890(884Ah),0x00,00,,
+User NVR 1  34891(884Bh),0x00,00,,
+User NVR 1  34892(884Ch),0x00,00,,
+User NVR 1  34893(884Dh),0x00,00,,
+User NVR 1  34894(884Eh),0x00,00,,
+User NVR 1  34895(884Fh),0x00,00,,
+User NVR 1  34896(8850h),0x00,00,,
+User NVR 1  34897(8851h),0x00,00,,
+User NVR 1  34898(8852h),0x00,00,,
+User NVR 1  34899(8853h),0x00,00,,
+User NVR 1  34900(8854h),0x00,00,,
+User NVR 1  34901(8855h),0x00,00,,
+User NVR 1  34902(8856h),0x00,00,,
+User NVR 1  34903(8857h),0x00,00,,
+User NVR 1  34904(8858h),0x00,00,,
+User NVR 1  34905(8859h),0x00,00,,
+User NVR 1  34906(885Ah),0x00,00,,
+User NVR 1  34907(885Bh),0x00,00,,
+User NVR 1  34908(885Ch),0x00,00,,
+User NVR 1  34909(885Dh),0x00,00,,
+User NVR 1  34910(885Eh),0x00,00,,
+User NVR 1  34911(885Fh),0x00,00,,
+User NVR 1  34912(8860h),0x00,00,,
+User NVR 1  34913(8861h),0x00,00,,
+User NVR 1  34914(8862h),0x00,00,,
+User NVR 1  34915(8863h),0x00,00,,
+User NVR 1  34916(8864h),0x00,00,,
+User NVR 1  34917(8865h),0x00,00,,
+User NVR 1  34918(8866h),0x00,00,,
+User NVR 1  34919(8867h),0x00,00,,
+User NVR 1  34920(8868h),0x00,00,,
+User NVR 1  34921(8869h),0x00,00,,
+User NVR 1  34922(886Ah),0x00,00,,
+User NVR 1  34923(886Bh),0x00,00,,
+User NVR 1  34924(886Ch),0x00,00,,
+User NVR 1  34925(886Dh),0x00,00,,
+User NVR 1  34926(886Eh),0x00,00,,
+User NVR 1  34927(886Fh),0x00,00,,
+User NVR 1  34928(8870h),0x00,00,,
+User NVR 1  34929(8871h),0x00,00,,
+User NVR 1  34930(8872h),0x00,00,,
+User NVR 1  34931(8873h),0x41,65,A,
+User NVR 1  34932(8874h),0x30,48,0,
+User NVR 1  34933(8875h),0x31,49,1,
+User NVR 1  34934(8876h),0x73,115,s,
+User NVR 1  34935(8877h),0x74,116,t,
+User NVR 1  34936(8878h),0x00,00,,
+User NVR 1  34937(8879h),0x00,00,,
+User NVR 1  34938(887Ah),0x00,00,,
+User NVR 1  34939(887Bh),0x00,00,,
+User NVR 1  34940(887Ch),0x00,00,,
+User NVR 1  34941(887Dh),0x00,00,,
+User NVR 1  34942(887Eh),0x00,00,,
+User NVR 1  34943(887Fh),0x00,00,,
+User NVR 2  34944(8880h),0x00,00,,
+User NVR 2  34945(8881h),0x00,00,,
+User NVR 2  34946(8882h),0x00,00,,
+User NVR 2  34947(8883h),0x00,00,,
+User NVR 2  34948(8884h),0x00,00,,
+User NVR 2  34949(8885h),0x00,00,,
+User NVR 2  34950(8886h),0x00,00,,
+User NVR 2  34951(8887h),0x00,00,,
+User NVR 2  34952(8888h),0x00,00,,
+User NVR 2  34953(8889h),0x00,00,,
+User NVR 2  34954(888Ah),0x00,00,,
+User NVR 2  34955(888Bh),0x00,00,,
+User NVR 2  34956(888Ch),0x00,00,,
+User NVR 2  34957(888Dh),0x00,00,,
+User NVR 2  34958(888Eh),0x00,00,,
+User NVR 2  34959(888Fh),0x00,00,,
+User NVR 2  34960(8890h),0x00,00,,
+User NVR 2  34961(8891h),0x00,00,,
+User NVR 2  34962(8892h),0x00,00,,
+User NVR 2  34963(8893h),0x00,00,,
+User NVR 2  34964(8894h),0x00,00,,
+User NVR 2  34965(8895h),0x00,00,,
+User NVR 2  34966(8896h),0x00,00,,
+User NVR 2  34967(8897h),0x00,00,,
+User NVR 2  34968(8898h),0x00,00,,
+User NVR 2  34969(8899h),0x00,00,,
+User NVR 2  34970(889Ah),0x00,00,,
+User NVR 2  34971(889Bh),0x00,00,,
+User NVR 2  34972(889Ch),0x00,00,,
+User NVR 2  34973(889Dh),0x00,00,,
+User NVR 2  34974(889Eh),0x00,00,,
+User NVR 2  34975(889Fh),0x00,00,,
+User NVR 2  34976(88A0h),0x00,00,,
+User NVR 2  34977(88A1h),0x00,00,,
+User NVR 2  34978(88A2h),0x00,00,,
+User NVR 2  34979(88A3h),0x00,00,,
+User NVR 2  34980(88A4h),0x00,00,,
+User NVR 2  34981(88A5h),0x00,00,,
+User NVR 2  34982(88A6h),0x00,00,,
+User NVR 2  34983(88A7h),0x00,00,,
+User NVR 2  34984(88A8h),0x00,00,,
+User NVR 2  34985(88A9h),0x00,00,,
+User NVR 2  34986(88AAh),0x00,00,,
+User NVR 2  34987(88ABh),0x00,00,,
+User NVR 2  34988(88ACh),0x00,00,,
+User NVR 2  34989(88ADh),0x00,00,,
+User NVR 2  34990(88AEh),0x00,00,,
+User NVR 2  34991(88AFh),0x00,00,,
+User NVR 2  34992(88B0h),0x00,00,,
+User NVR 2  34993(88B1h),0x00,00,,
+User NVR 2  34994(88B2h),0x00,00,,
+User NVR 2  34995(88B3h),0x00,00,,
+User NVR 2  34996(88B4h),0x00,00,,
+User NVR 2  34997(88B5h),0x00,00,,
+User NVR 2  34998(88B6h),0x00,00,,
+User NVR 2  34999(88B7h),0x00,00,,
+User NVR 2  35000(88B8h),0x00,00,,
+User NVR 2  35001(88B9h),0x00,00,,
+User NVR 2  35002(88BAh),0x00,00,,
+User NVR 2  35003(88BBh),0x00,00,,
+User NVR 2  35004(88BCh),0x00,00,,
+User NVR 2  35005(88BDh),0x00,00,,
+User NVR 2  35006(88BEh),0x00,00,,
+User NVR 2  35007(88BFh),0x00,00,,
+User NVR 2  35008(88C0h),0x00,00,,
+User NVR 2  35009(88C1h),0x00,00,,
+User NVR 2  35010(88C2h),0x00,00,,
+User NVR 2  35011(88C3h),0x00,00,,
+User NVR 2  35012(88C4h),0x00,00,,
+User NVR 2  35013(88C5h),0x00,00,,
+User NVR 2  35014(88C6h),0x00,00,,
+User NVR 2  35015(88C7h),0x00,00,,
+User NVR 2  35016(88C8h),0x00,00,,
+User NVR 2  35017(88C9h),0x00,00,,
+User NVR 2  35018(88CAh),0x00,00,,
+User NVR 2  35019(88CBh),0x00,00,,
+User NVR 2  35020(88CCh),0x00,00,,
+User NVR 2  35021(88CDh),0x00,00,,
+User NVR 2  35022(88CEh),0x00,00,,
+User NVR 2  35023(88CFh),0x00,00,,
+User NVR 2  35024(88D0h),0x00,00,,
+User NVR 2  35025(88D1h),0x00,00,,
+User NVR 2  35026(88D2h),0x00,00,,
+User NVR 2  35027(88D3h),0x00,00,,
+User NVR 2  35028(88D4h),0x00,00,,
+User NVR 2  35029(88D5h),0x00,00,,
+User NVR 2  35030(88D6h),0x00,00,,
+User NVR 2  35031(88D7h),0x00,00,,
+User NVR 2  35032(88D8h),0x00,00,,
+User NVR 2  35033(88D9h),0x00,00,,
+User NVR 2  35034(88DAh),0x00,00,,
+User NVR 2  35035(88DBh),0x00,00,,
+User NVR 2  35036(88DCh),0x00,00,,
+User NVR 2  35037(88DDh),0x00,00,,
+User NVR 2  35038(88DEh),0x00,00,,
+User NVR 2  35039(88DFh),0x00,00,,
+User NVR 2  35040(88E0h),0x00,00,,
+User NVR 2  35041(88E1h),0x00,00,,
+User NVR 2  35042(88E2h),0x00,00,,
+User NVR 2  35043(88E3h),0x00,00,,
+User NVR 2  35044(88E4h),0x00,00,,
+User NVR 2  35045(88E5h),0x00,00,,
+User NVR 2  35046(88E6h),0x00,00,,
+User NVR 2  35047(88E7h),0x00,00,,
+User NVR 2  35048(88E8h),0x00,00,,
+User NVR 2  35049(88E9h),0x00,00,,
+User NVR 2  35050(88EAh),0x00,00,,
+User NVR 2  35051(88EBh),0x00,00,,
+User NVR 2  35052(88ECh),0x00,00,,
+User NVR 2  35053(88EDh),0x00,00,,
+User NVR 2  35054(88EEh),0x00,00,,
+User NVR 2  35055(88EFh),0x00,00,,
+User NVR 2  35056(88F0h),0x00,00,,
+User NVR 2  35057(88F1h),0x00,00,,
+User NVR 2  35058(88F2h),0x00,00,,
+User NVR 2  35059(88F3h),0x00,00,,
+User NVR 2  35060(88F4h),0x00,00,,
+User NVR 2  35061(88F5h),0x00,00,,
+User NVR 2  35062(88F6h),0x00,00,,
+User NVR 2  35063(88F7h),0x00,00,,
+User NVR 2  35064(88F8h),0x00,00,,
+User NVR 2  35065(88F9h),0x00,00,,
+User NVR 2  35066(88FAh),0x00,00,,
+User NVR 2  35067(88FBh),0x00,00,,
+User NVR 2  35068(88FCh),0x00,00,,
+User NVR 2  35069(88FDh),0x00,00,,
+User NVR 2  35070(88FEh),0x00,00,,
+User NVR 2  35071(88FFh),0x00,00,,
+CFP Module VR 1  40960(A000h),0x0000,0000,,Vendor/User optional use, not specified by MSA
+CFP Module VR 1  40961(A001h),0x0000,0000,,Vendor/User optional use, not specified by MSA
+CFP Module VR 1  40962(A002h),0x0000,0000,,Vendor/User optional use, not specified by MSA
+CFP Module VR 1  40963(A003h),0x0000,0000,,Vendor/User optional use, not specified by MSA
+CFP Module VR 1  40964(A004h),0x0000,0000,,NVR Access Control
+CFP Module VR 1  40965(A005h),0x0000,0000,,PRG_CNTL3 Function Select
+CFP Module VR 1  40966(A006h),0x0000,0000,,PRG_CNTL2 Function Select
+CFP Module VR 1  40967(A007h),0x0001,1,,PRG_CNTL1 Function Select
+CFP Module VR 1  40968(A008h),0x0003,3,,PRG_ALRM3 Source Select
+CFP Module VR 1  40969(A009h),0x0002,2,,PRG_ALRM2 Source Select
+CFP Module VR 1  40970(A00Ah),0x0001,1,,PRG_ALRM1 Source Select
+CFP Module VR 1  40971(A00Bh),0x0000,0000,,Module Bi-/Uni-Directional Operating Mode Select
+CFP Module VR 1  40972(A00Ch),0x0000,0000,,Reserved
+CFP Module VR 1  40973(A00Dh),0x0000,0000,,Reserved
+CFP Module VR 1  40974(A00Eh),0x0000,0000,,Reserved
+CFP Module VR 1  40975(A00Fh),0x0000,0000,,Reserved
+CFP Module VR 1  40976(A010h),0x000E,14,,Module General Control
+CFP Module VR 1  40977(A011h),0x0201,513,?,Network Lane TX Control
+CFP Module VR 1  40978(A012h),0x0000,0000,,Network Lane RX Control
+CFP Module VR 1  40979(A013h),0x0000,0000,,Individual Network Lane TX_DIS Control
+CFP Module VR 1  40980(A014h),0x0000,0000,,Host Lane Control
+CFP Module VR 1  40981(A015h),0x0000,0000,,Reserved
+CFP Module VR 1  40982(A016h),0x0020,32, ,Module State
+CFP Module VR 1  40983(A017h),0x0000,0000,,Reserved
+CFP Module VR 1  40984(A018h),0xF180,61824,?,Global Alarm Summary
+CFP Module VR 1  40985(A019h),0x000F,15,,Network Lane Alarm and Warning Summary
+CFP Module VR 1  40986(A01Ah),0x000F,15,,Network Lane Fault and Status Summary
+CFP Module VR 1  40987(A01Bh),0x03FF,1023,?,Host Lane Fault and Status Summary
+CFP Module VR 1  40988(A01Ch),0x0000,0000,,Reserved
+CFP Module VR 1  40989(A01Dh),0x0272,626,?,Module General Status
+CFP Module VR 1  40990(A01Eh),0x0000,0000,,Module Fault Status
+CFP Module VR 1  40991(A01Fh),0x0000,0000,,Module Alarms and Warnings 1
+CFP Module VR 1  40992(A020h),0x0000,0000,,Module Alarms and Warnings 2
+CFP Module VR 1  40993(A021h),0x0000,0000,,Reserved
+CFP Module VR 1  40994(A022h),0x003F,63,?,Module State Latch
+CFP Module VR 1  40995(A023h),0x0270,624,?,Module General Status Latch
+CFP Module VR 1  40996(A024h),0x0000,0000,,Module Fault Status Latch
+CFP Module VR 1  40997(A025h),0x0000,0000,,Module Alarms and Warnings 1 Latch
+CFP Module VR 1  40998(A026h),0x0000,0000,,Module Alarms and Warnings 2 Latch
+CFP Module VR 1  40999(A027h),0x0000,0000,,Reserved
+CFP Module VR 1  41000(A028h),0x006A,106,j,Module State Enable
+CFP Module VR 1  41001(A029h),0xA3F0,41968,?,Module General Status Enable
+CFP Module VR 1  41002(A02Ah),0x0000,0000,,Module Fault Status Enable
+CFP Module VR 1  41003(A02Bh),0x0FF0,4080,?,Module Alarm and Warnings 1 Enable
+CFP Module VR 1  41004(A02Ch),0x0000,0000,,Module Alarms and Warnings 2 Enable
+CFP Module VR 1  41005(A02Dh),0x0000,0000,,Reserved
+CFP Module VR 1  41006(A02Eh),0x0000,0000,,Reserved
+CFP Module VR 1  41007(A02Fh),0x174E,5966,?,Module Temp Monitor A/D Value
+CFP Module VR 1  41008(A030h),0x8038,32824,?,Module Power supply 3.3 V Monitor A/D Value
+CFP Module VR 1  41009(A031h),0x0000,0000,,SOA Bias Current A/D Value
+CFP Module VR 1  41010(A032h),0x0000,0000,,Module Auxiliary 1 Monitor A/D Value
+CFP Module VR 1  41011(A033h),0x0000,0000,,Module Auxiliary 2 Monitor A/D Value
+CFP Module VR 1  41012(A034h),0x0000,0000,,Reserved
+CFP Module VR 1  41013(A035h),0x0000,0000,,Reserved
+CFP Module VR 1  41014(A036h),0x0000,0000,,Reserved
+CFP Module VR 1  41015(A037h),0x0000,0000,,Reserved
+CFP Module VR 1  41016(A038h),0x0000,0000,,Network Lane PRBS Data Bit Count
+CFP Module VR 1  41017(A039h),0x0000,0000,,Host Lane PRBS Data Bit Count
+CFP Module VR 1  41018(A03Ah),0x0000,0000,,Reserved
+CFP Module VR 1  41019(A03Bh),0x0000,0000,,Reserved
+CFP Module VR 1  41020(A03Ch),0x0000,0000,,Reserved
+CFP Module VR 1  41021(A03Dh),0x0000,0000,,Reserved
+CFP Module VR 1  41022(A03Eh),0x0000,0000,,Reserved
+CFP Module VR 1  41023(A03Fh),0x0000,0000,,Reserved
+CFP Module VR 1  41024(A040h),0x0000,0000,,Reserved
+CFP Module VR 1  41025(A041h),0x0000,0000,,Reserved
+CFP Module VR 1  41026(A042h),0x0000,0000,,Reserved
+CFP Module VR 1  41027(A043h),0x0000,0000,,Reserved
+CFP Module VR 1  41028(A044h),0x0000,0000,,Reserved
+CFP Module VR 1  41029(A045h),0x0000,0000,,Reserved
+CFP Module VR 1  41030(A046h),0x0000,0000,,Reserved
+CFP Module VR 1  41031(A047h),0x0000,0000,,Reserved
+CFP Module VR 1  41032(A048h),0x0000,0000,,Reserved
+CFP Module VR 1  41033(A049h),0x0000,0000,,Reserved
+CFP Module VR 1  41034(A04Ah),0x0000,0000,,Reserved
+CFP Module VR 1  41035(A04Bh),0x0000,0000,,Reserved
+CFP Module VR 1  41036(A04Ch),0x0000,0000,,Reserved
+CFP Module VR 1  41037(A04Dh),0x0000,0000,,Reserved
+CFP Module VR 1  41038(A04Eh),0x0000,0000,,Reserved
+CFP Module VR 1  41039(A04Fh),0x0000,0000,,Reserved
+CFP Module VR 1  41040(A050h),0x0000,0000,,Reserved
+CFP Module VR 1  41041(A051h),0x0000,0000,,Reserved
+CFP Module VR 1  41042(A052h),0x0000,0000,,Reserved
+CFP Module VR 1  41043(A053h),0x0000,0000,,Reserved
+CFP Module VR 1  41044(A054h),0x0000,0000,,Reserved
+CFP Module VR 1  41045(A055h),0x0000,0000,,Reserved
+CFP Module VR 1  41046(A056h),0x0000,0000,,Reserved
+CFP Module VR 1  41047(A057h),0x0000,0000,,Reserved
+CFP Module VR 1  41048(A058h),0x0000,0000,,Reserved
+CFP Module VR 1  41049(A059h),0x0000,0000,,Reserved
+CFP Module VR 1  41050(A05Ah),0x0000,0000,,Reserved
+CFP Module VR 1  41051(A05Bh),0x0000,0000,,Reserved
+CFP Module VR 1  41052(A05Ch),0x0000,0000,,Reserved
+CFP Module VR 1  41053(A05Dh),0x0000,0000,,Reserved
+CFP Module VR 1  41054(A05Eh),0x0000,0000,,Reserved
+CFP Module VR 1  41055(A05Fh),0x0000,0000,,Reserved
+CFP Module VR 1  41056(A060h),0x0000,0000,,Reserved
+CFP Module VR 1  41057(A061h),0x0000,0000,,Reserved
+CFP Module VR 1  41058(A062h),0x0000,0000,,Reserved
+CFP Module VR 1  41059(A063h),0x0000,0000,,Reserved
+CFP Module VR 1  41060(A064h),0x0000,0000,,Reserved
+CFP Module VR 1  41061(A065h),0x0000,0000,,Reserved
+CFP Module VR 1  41062(A066h),0x0000,0000,,Reserved
+CFP Module VR 1  41063(A067h),0x0000,0000,,Reserved
+CFP Module VR 1  41064(A068h),0x0000,0000,,Reserved
+CFP Module VR 1  41065(A069h),0x0000,0000,,Reserved
+CFP Module VR 1  41066(A06Ah),0x0000,0000,,Reserved
+CFP Module VR 1  41067(A06Bh),0x0000,0000,,Reserved
+CFP Module VR 1  41068(A06Ch),0x0000,0000,,Reserved
+CFP Module VR 1  41069(A06Dh),0x0000,0000,,Reserved
+CFP Module VR 1  41070(A06Eh),0x0000,0000,,Reserved
+CFP Module VR 1  41071(A06Fh),0x0000,0000,,Reserved
+CFP Module VR 1  41072(A070h),0x0000,0000,,Reserved
+CFP Module VR 1  41073(A071h),0x0000,0000,,Reserved
+CFP Module VR 1  41074(A072h),0x0000,0000,,Reserved
+CFP Module VR 1  41075(A073h),0x0000,0000,,Reserved
+CFP Module VR 1  41076(A074h),0x0000,0000,,Reserved
+CFP Module VR 1  41077(A075h),0x0000,0000,,Reserved
+CFP Module VR 1  41078(A076h),0x0000,0000,,Reserved
+CFP Module VR 1  41079(A077h),0x0000,0000,,Reserved
+CFP Module VR 1  41080(A078h),0x0000,0000,,Reserved
+CFP Module VR 1  41081(A079h),0x0000,0000,,Reserved
+CFP Module VR 1  41082(A07Ah),0x0000,0000,,Reserved
+CFP Module VR 1  41083(A07Bh),0x0000,0000,,Reserved
+CFP Module VR 1  41084(A07Ch),0x0000,0000,,Reserved
+CFP Module VR 1  41085(A07Dh),0x0000,0000,,Reserved
+CFP Module VR 1  41086(A07Eh),0x0000,0000,,Reserved
+CFP Module VR 1  41087(A07Fh),0x0000,0000,,Reserved
+Network Lane VR 1  41472(A200h),0x0003,3,,Network Lane n Alarm and Warning
+Network Lane VR 1  41473(A201h),0x0003,3,,Network Lane n Alarm and Warning
+Network Lane VR 1  41474(A202h),0x0003,3,,Network Lane n Alarm and Warning
+Network Lane VR 1  41475(A203h),0x0003,3,,Network Lane n Alarm and Warning
+Network Lane VR 1  41476(A204h),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41477(A205h),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41478(A206h),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41479(A207h),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41480(A208h),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41481(A209h),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41482(A20Ah),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41483(A20Bh),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41484(A20Ch),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41485(A20Dh),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41486(A20Eh),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41487(A20Fh),0x0000,0000,,Network Lane n Alarm and Warning
+Network Lane VR 1  41488(A210h),0x0018,24,,Network Lane n Fault and Status
+Network Lane VR 1  41489(A211h),0x0018,24,,Network Lane n Fault and Status
+Network Lane VR 1  41490(A212h),0x0018,24,,Network Lane n Fault and Status
+Network Lane VR 1  41491(A213h),0x0018,24,,Network Lane n Fault and Status
+Network Lane VR 1  41492(A214h),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41493(A215h),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41494(A216h),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41495(A217h),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41496(A218h),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41497(A219h),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41498(A21Ah),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41499(A21Bh),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41500(A21Ch),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41501(A21Dh),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41502(A21Eh),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41503(A21Fh),0x0000,0000,,Network Lane n Fault and Status
+Network Lane VR 1  41504(A220h),0x0003,3,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41505(A221h),0x0003,3,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41506(A222h),0x0003,3,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41507(A223h),0x0003,3,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41508(A224h),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41509(A225h),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41510(A226h),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41511(A227h),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41512(A228h),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41513(A229h),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41514(A22Ah),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41515(A22Bh),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41516(A22Ch),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41517(A22Dh),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41518(A22Eh),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41519(A22Fh),0x0000,0000,,Network Lane n Alarm and Warning Latch
+Network Lane VR 1  41520(A230h),0x0018,24,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41521(A231h),0x0018,24,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41522(A232h),0x0018,24,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41523(A233h),0x0018,24,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41524(A234h),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41525(A235h),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41526(A236h),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41527(A237h),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41528(A238h),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41529(A239h),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41530(A23Ah),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41531(A23Bh),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41532(A23Ch),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41533(A23Dh),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41534(A23Eh),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41535(A23Fh),0x0000,0000,,Network Lane n Fault and Status Latch
+Network Lane VR 1  41536(A240h),0xFFFF,65535,?,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41537(A241h),0xFFFF,65535,?,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41538(A242h),0xFFFF,65535,?,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41539(A243h),0xFFFF,65535,?,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41540(A244h),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41541(A245h),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41542(A246h),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41543(A247h),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41544(A248h),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41545(A249h),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41546(A24Ah),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41547(A24Bh),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41548(A24Ch),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41549(A24Dh),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41550(A24Eh),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41551(A24Fh),0x0000,0000,,Network Lane n Alarm and Warning Enable
+Network Lane VR 1  41552(A250h),0x80DC,32988,?,Network Lane n Fault and Status Enable
+Network Lane VR 1  41553(A251h),0x80DC,32988,?,Network Lane n Fault and Status Enable
+Network Lane VR 1  41554(A252h),0x80DC,32988,?,Network Lane n Fault and Status Enable
+Network Lane VR 1  41555(A253h),0x80DC,32988,?,Network Lane n Fault and Status Enable
+Network Lane VR 1  41556(A254h),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41557(A255h),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41558(A256h),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41559(A257h),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41560(A258h),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41561(A259h),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41562(A25Ah),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41563(A25Bh),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41564(A25Ch),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41565(A25Dh),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41566(A25Eh),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41567(A25Fh),0x0000,0000,,Network Lane n Fault and Status Enable
+Network Lane VR 1  41568(A260h),0x0000,0000,,Reserved
+Network Lane VR 1  41569(A261h),0x0000,0000,,Reserved
+Network Lane VR 1  41570(A262h),0x0000,0000,,Reserved
+Network Lane VR 1  41571(A263h),0x0000,0000,,Reserved
+Network Lane VR 1  41572(A264h),0x0000,0000,,Reserved
+Network Lane VR 1  41573(A265h),0x0000,0000,,Reserved
+Network Lane VR 1  41574(A266h),0x0000,0000,,Reserved
+Network Lane VR 1  41575(A267h),0x0000,0000,,Reserved
+Network Lane VR 1  41576(A268h),0x0000,0000,,Reserved
+Network Lane VR 1  41577(A269h),0x0000,0000,,Reserved
+Network Lane VR 1  41578(A26Ah),0x0000,0000,,Reserved
+Network Lane VR 1  41579(A26Bh),0x0000,0000,,Reserved
+Network Lane VR 1  41580(A26Ch),0x0000,0000,,Reserved
+Network Lane VR 1  41581(A26Dh),0x0000,0000,,Reserved
+Network Lane VR 1  41582(A26Eh),0x0000,0000,,Reserved
+Network Lane VR 1  41583(A26Fh),0x0000,0000,,Reserved
+Network Lane VR 1  41584(A270h),0x0000,0000,,Reserved
+Network Lane VR 1  41585(A271h),0x0000,0000,,Reserved
+Network Lane VR 1  41586(A272h),0x0000,0000,,Reserved
+Network Lane VR 1  41587(A273h),0x0000,0000,,Reserved
+Network Lane VR 1  41588(A274h),0x0000,0000,,Reserved
+Network Lane VR 1  41589(A275h),0x0000,0000,,Reserved
+Network Lane VR 1  41590(A276h),0x0000,0000,,Reserved
+Network Lane VR 1  41591(A277h),0x0000,0000,,Reserved
+Network Lane VR 1  41592(A278h),0x0000,0000,,Reserved
+Network Lane VR 1  41593(A279h),0x0000,0000,,Reserved
+Network Lane VR 1  41594(A27Ah),0x0000,0000,,Reserved
+Network Lane VR 1  41595(A27Bh),0x0000,0000,,Reserved
+Network Lane VR 1  41596(A27Ch),0x0000,0000,,Reserved
+Network Lane VR 1  41597(A27Dh),0x0000,0000,,Reserved
+Network Lane VR 1  41598(A27Eh),0x0000,0000,,Reserved
+Network Lane VR 1  41599(A27Fh),0x0000,0000,,Reserved
+Network Lane VR 2  41600(A280h),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41601(A281h),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41602(A282h),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41603(A283h),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41604(A284h),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41605(A285h),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41606(A286h),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41607(A287h),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41608(A288h),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41609(A289h),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41610(A28Ah),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41611(A28Bh),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41612(A28Ch),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41613(A28Dh),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41614(A28Eh),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41615(A28Fh),0x0000,0000,,Network Lane n FEC Controls
+Network Lane VR 2  41616(A290h),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41617(A291h),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41618(A292h),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41619(A293h),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41620(A294h),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41621(A295h),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41622(A296h),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41623(A297h),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41624(A298h),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41625(A299h),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41626(A29Ah),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41627(A29Bh),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41628(A29Ch),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41629(A29Dh),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41630(A29Eh),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41631(A29Fh),0x0000,0000,,Network Lane n PRBS Rx Error Count
+Network Lane VR 2  41632(A2A0h),0xA528,42280,?,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41633(A2A1h),0x826D,33389,?,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41634(A2A2h),0xABA7,43943,?,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41635(A2A3h),0x6CF0,27888,?,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41636(A2A4h),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41637(A2A5h),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41638(A2A6h),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41639(A2A7h),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41640(A2A8h),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41641(A2A9h),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41642(A2AAh),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41643(A2ABh),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41644(A2ACh),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41645(A2ADh),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41646(A2AEh),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41647(A2AFh),0x0000,0000,,Network Lane n Laser Bias Current monitor A/D value
+Network Lane VR 2  41648(A2B0h),0x2BD4,11220,?,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41649(A2B1h),0x2E48,11848,?,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41650(A2B2h),0x28A7,10407,?,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41651(A2B3h),0x2D41,11585,?,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41652(A2B4h),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41653(A2B5h),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41654(A2B6h),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41655(A2B7h),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41656(A2B8h),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41657(A2B9h),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41658(A2BAh),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41659(A2BBh),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41660(A2BCh),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41661(A2BDh),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41662(A2BEh),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41663(A2BFh),0x0000,0000,,Network Lane n Laser Output Power monitor A/D value
+Network Lane VR 2  41664(A2C0h),0x3300,13056,?,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41665(A2C1h),0x2E9E,11934,?,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41666(A2C2h),0x3492,13458,?,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41667(A2C3h),0x2959,10585,?,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41668(A2C4h),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41669(A2C5h),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41670(A2C6h),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41671(A2C7h),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41672(A2C8h),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41673(A2C9h),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41674(A2CAh),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41675(A2CBh),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41676(A2CCh),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41677(A2CDh),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41678(A2CEh),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41679(A2CFh),0x0000,0000,,Network Lane n Laser Temp Monitor A/D value
+Network Lane VR 2  41680(A2D0h),0x0032,50,2,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41681(A2D1h),0x0035,53,5,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41682(A2D2h),0x002B,43,+,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41683(A2D3h),0x0014,20,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41684(A2D4h),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41685(A2D5h),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41686(A2D6h),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41687(A2D7h),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41688(A2D8h),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41689(A2D9h),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41690(A2DAh),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41691(A2DBh),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41692(A2DCh),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41693(A2DDh),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41694(A2DEh),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41695(A2DFh),0x0000,0000,,Network Lane n Receiver Input Power monitor A/D value
+Network Lane VR 2  41696(A2E0h),0x0000,0000,,Reserved
+Network Lane VR 2  41697(A2E1h),0x0000,0000,,Reserved
+Network Lane VR 2  41698(A2E2h),0x0000,0000,,Reserved
+Network Lane VR 2  41699(A2E3h),0x0000,0000,,Reserved
+Network Lane VR 2  41700(A2E4h),0x0000,0000,,Reserved
+Network Lane VR 2  41701(A2E5h),0x0000,0000,,Reserved
+Network Lane VR 2  41702(A2E6h),0x0000,0000,,Reserved
+Network Lane VR 2  41703(A2E7h),0x0000,0000,,Reserved
+Network Lane VR 2  41704(A2E8h),0x0000,0000,,Reserved
+Network Lane VR 2  41705(A2E9h),0x0000,0000,,Reserved
+Network Lane VR 2  41706(A2EAh),0x0000,0000,,Reserved
+Network Lane VR 2  41707(A2EBh),0x0000,0000,,Reserved
+Network Lane VR 2  41708(A2ECh),0x0000,0000,,Reserved
+Network Lane VR 2  41709(A2EDh),0x0000,0000,,Reserved
+Network Lane VR 2  41710(A2EEh),0x0000,0000,,Reserved
+Network Lane VR 2  41711(A2EFh),0x0000,0000,,Reserved
+Network Lane VR 2  41712(A2F0h),0x0000,0000,,Reserved
+Network Lane VR 2  41713(A2F1h),0x0000,0000,,Reserved
+Network Lane VR 2  41714(A2F2h),0x0000,0000,,Reserved
+Network Lane VR 2  41715(A2F3h),0x0000,0000,,Reserved
+Network Lane VR 2  41716(A2F4h),0x0000,0000,,Reserved
+Network Lane VR 2  41717(A2F5h),0x0000,0000,,Reserved
+Network Lane VR 2  41718(A2F6h),0x0000,0000,,Reserved
+Network Lane VR 2  41719(A2F7h),0x0000,0000,,Reserved
+Network Lane VR 2  41720(A2F8h),0x0000,0000,,Reserved
+Network Lane VR 2  41721(A2F9h),0x0000,0000,,Reserved
+Network Lane VR 2  41722(A2FAh),0x0000,0000,,Reserved
+Network Lane VR 2  41723(A2FBh),0x0000,0000,,Reserved
+Network Lane VR 2  41724(A2FCh),0x0000,0000,,Reserved
+Network Lane VR 2  41725(A2FDh),0x0000,0000,,Reserved
+Network Lane VR 2  41726(A2FEh),0x0000,0000,,Reserved
+Network Lane VR 2  41727(A2FFh),0x0000,0000,,Reserved
+Host Lane VR 1  41984(A400h),0x0003,3,,Host Lane m Fault and Status
+Host Lane VR 1  41985(A401h),0x0003,3,,Host Lane m Fault and Status
+Host Lane VR 1  41986(A402h),0x0003,3,,Host Lane m Fault and Status
+Host Lane VR 1  41987(A403h),0x0003,3,,Host Lane m Fault and Status
+Host Lane VR 1  41988(A404h),0x0003,3,,Host Lane m Fault and Status
+Host Lane VR 1  41989(A405h),0x0003,3,,Host Lane m Fault and Status
+Host Lane VR 1  41990(A406h),0x0003,3,,Host Lane m Fault and Status
+Host Lane VR 1  41991(A407h),0x0003,3,,Host Lane m Fault and Status
+Host Lane VR 1  41992(A408h),0x0003,3,,Host Lane m Fault and Status
+Host Lane VR 1  41993(A409h),0x0003,3,,Host Lane m Fault and Status
+Host Lane VR 1  41994(A40Ah),0x0000,0000,,Host Lane m Fault and Status
+Host Lane VR 1  41995(A40Bh),0x0000,0000,,Host Lane m Fault and Status
+Host Lane VR 1  41996(A40Ch),0x0000,0000,,Host Lane m Fault and Status
+Host Lane VR 1  41997(A40Dh),0x0000,0000,,Host Lane m Fault and Status
+Host Lane VR 1  41998(A40Eh),0x0000,0000,,Host Lane m Fault and Status
+Host Lane VR 1  41999(A40Fh),0x0000,0000,,Host Lane m Fault and Status
+Host Lane VR 1  42000(A410h),0x0003,3,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42001(A411h),0x0003,3,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42002(A412h),0x0003,3,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42003(A413h),0x0003,3,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42004(A414h),0x0003,3,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42005(A415h),0x0003,3,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42006(A416h),0x0003,3,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42007(A417h),0x0003,3,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42008(A418h),0x0003,3,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42009(A419h),0x0003,3,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42010(A41Ah),0x0000,0000,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42011(A41Bh),0x0000,0000,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42012(A41Ch),0x0000,0000,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42013(A41Dh),0x0000,0000,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42014(A41Eh),0x0000,0000,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42015(A41Fh),0x0000,0000,,Host Lane m Fault and Status Latch
+Host Lane VR 1  42016(A420h),0x0003,3,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42017(A421h),0x0003,3,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42018(A422h),0x0003,3,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42019(A423h),0x0003,3,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42020(A424h),0x0003,3,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42021(A425h),0x0003,3,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42022(A426h),0x0003,3,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42023(A427h),0x0003,3,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42024(A428h),0x0003,3,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42025(A429h),0x0003,3,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42026(A42Ah),0x0000,0000,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42027(A42Bh),0x0000,0000,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42028(A42Ch),0x0000,0000,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42029(A42Dh),0x0000,0000,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42030(A42Eh),0x0000,0000,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42031(A42Fh),0x0000,0000,,Host Lane m Fault and Status Enable
+Host Lane VR 1  42032(A430h),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42033(A431h),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42034(A432h),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42035(A433h),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42036(A434h),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42037(A435h),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42038(A436h),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42039(A437h),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42040(A438h),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42041(A439h),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42042(A43Ah),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42043(A43Bh),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42044(A43Ch),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42045(A43Dh),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42046(A43Eh),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42047(A43Fh),0x0000,0000,,Host Lane m PRBS TX Error Count
+Host Lane VR 1  42048(A440h),0x0007,7,,Host Lane m Control
+Host Lane VR 1  42049(A441h),0x0007,7,,Host Lane m Control
+Host Lane VR 1  42050(A442h),0x0007,7,,Host Lane m Control
+Host Lane VR 1  42051(A443h),0x0007,7,,Host Lane m Control
+Host Lane VR 1  42052(A444h),0x0007,7,,Host Lane m Control
+Host Lane VR 1  42053(A445h),0x0007,7,,Host Lane m Control
+Host Lane VR 1  42054(A446h),0x0007,7,,Host Lane m Control
+Host Lane VR 1  42055(A447h),0x0007,7,,Host Lane m Control
+Host Lane VR 1  42056(A448h),0x0007,7,,Host Lane m Control
+Host Lane VR 1  42057(A449h),0x0007,7,,Host Lane m Control
+Host Lane VR 1  42058(A44Ah),0x0000,0000,,Host Lane m Control
+Host Lane VR 1  42059(A44Bh),0x0000,0000,,Host Lane m Control
+Host Lane VR 1  42060(A44Ch),0x0000,0000,,Host Lane m Control
+Host Lane VR 1  42061(A44Dh),0x0000,0000,,Host Lane m Control
+Host Lane VR 1  42062(A44Eh),0x0000,0000,,Host Lane m Control
+Host Lane VR 1  42063(A44Fh),0x0000,0000,,Host Lane m Control
+Host Lane VR 1  42064(A450h),0x0000,0000,,Reserved
+Host Lane VR 1  42065(A451h),0x0000,0000,,Reserved
+Host Lane VR 1  42066(A452h),0x0000,0000,,Reserved
+Host Lane VR 1  42067(A453h),0x0000,0000,,Reserved
+Host Lane VR 1  42068(A454h),0x0000,0000,,Reserved
+Host Lane VR 1  42069(A455h),0x0000,0000,,Reserved
+Host Lane VR 1  42070(A456h),0x0000,0000,,Reserved
+Host Lane VR 1  42071(A457h),0x0000,0000,,Reserved
+Host Lane VR 1  42072(A458h),0x0000,0000,,Reserved
+Host Lane VR 1  42073(A459h),0x0000,0000,,Reserved
+Host Lane VR 1  42074(A45Ah),0x0000,0000,,Reserved
+Host Lane VR 1  42075(A45Bh),0x0000,0000,,Reserved
+Host Lane VR 1  42076(A45Ch),0x0000,0000,,Reserved
+Host Lane VR 1  42077(A45Dh),0x0000,0000,,Reserved
+Host Lane VR 1  42078(A45Eh),0x0000,0000,,Reserved
+Host Lane VR 1  42079(A45Fh),0x0000,0000,,Reserved
+Host Lane VR 1  42080(A460h),0x0000,0000,,Reserved
+Host Lane VR 1  42081(A461h),0x0000,0000,,Reserved
+Host Lane VR 1  42082(A462h),0x0000,0000,,Reserved
+Host Lane VR 1  42083(A463h),0x0000,0000,,Reserved
+Host Lane VR 1  42084(A464h),0x0000,0000,,Reserved
+Host Lane VR 1  42085(A465h),0x0000,0000,,Reserved
+Host Lane VR 1  42086(A466h),0x0000,0000,,Reserved
+Host Lane VR 1  42087(A467h),0x0000,0000,,Reserved
+Host Lane VR 1  42088(A468h),0x0000,0000,,Reserved
+Host Lane VR 1  42089(A469h),0x0000,0000,,Reserved
+Host Lane VR 1  42090(A46Ah),0x0000,0000,,Reserved
+Host Lane VR 1  42091(A46Bh),0x0000,0000,,Reserved
+Host Lane VR 1  42092(A46Ch),0x0000,0000,,Reserved
+Host Lane VR 1  42093(A46Dh),0x0000,0000,,Reserved
+Host Lane VR 1  42094(A46Eh),0x0000,0000,,Reserved
+Host Lane VR 1  42095(A46Fh),0x0000,0000,,Reserved
+Host Lane VR 1  42096(A470h),0x0000,0000,,Reserved
+Host Lane VR 1  42097(A471h),0x0000,0000,,Reserved
+Host Lane VR 1  42098(A472h),0x0000,0000,,Reserved
+Host Lane VR 1  42099(A473h),0x0000,0000,,Reserved
+Host Lane VR 1  42100(A474h),0x0000,0000,,Reserved
+Host Lane VR 1  42101(A475h),0x0000,0000,,Reserved
+Host Lane VR 1  42102(A476h),0x0000,0000,,Reserved
+Host Lane VR 1  42103(A477h),0x0000,0000,,Reserved
+Host Lane VR 1  42104(A478h),0x0000,0000,,Reserved
+Host Lane VR 1  42105(A479h),0x0000,0000,,Reserved
+Host Lane VR 1  42106(A47Ah),0x0000,0000,,Reserved
+Host Lane VR 1  42107(A47Bh),0x0000,0000,,Reserved
+Host Lane VR 1  42108(A47Ch),0x0000,0000,,Reserved
+Host Lane VR 1  42109(A47Dh),0x0000,0000,,Reserved
+Host Lane VR 1  42110(A47Eh),0x0000,0000,,Reserved
+Host Lane VR 1  42111(A47Fh),0x0000,0000,,Reserved
