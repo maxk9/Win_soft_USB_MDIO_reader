@@ -32,10 +32,10 @@ namespace FiberTreid_CFP_Reader
         {
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form1));
 			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
 			this.connect = new System.Windows.Forms.Button();
@@ -74,17 +74,10 @@ namespace FiberTreid_CFP_Reader
 			this.pr_bar = new System.Windows.Forms.ToolStripProgressBar();
 			this.status_date = new System.Windows.Forms.ToolStripStatusLabel();
 			this.dtg_cfp_nvr = new System.Windows.Forms.DataGridView();
-			this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tb_phyaddr = new System.Windows.Forms.TextBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.tb_devaddr = new System.Windows.Forms.TextBox();
 			this.label15 = new System.Windows.Forms.Label();
-			this.dtg_vendor = new System.Windows.Forms.DataGridView();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dtg_net_lane = new System.Windows.Forms.DataGridView();
 			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,10 +89,6 @@ namespace FiberTreid_CFP_Reader
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
-			this.dtg_us_nvr = new System.Windows.Forms.DataGridView();
-			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.groupBox6 = new System.Windows.Forms.GroupBox();
 			this.btn_host_lane = new System.Windows.Forms.Button();
 			this.btn_write_host_lane = new System.Windows.Forms.Button();
@@ -126,18 +115,33 @@ namespace FiberTreid_CFP_Reader
 			this.fileOpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.file_open = new System.Windows.Forms.ToolStripMenuItem();
 			this.file_save = new System.Windows.Forms.ToolStripMenuItem();
+			this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dtg_vendor = new System.Windows.Forms.DataGridView();
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dtg_us_nvr = new System.Windows.Forms.DataGridView();
+			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.flowLayoutPanel1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtg_cfp_nvr)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtg_vendor)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtg_net_lane)).BeginInit();
 			this.groupBox1.SuspendLayout();
+			this.groupBox2.SuspendLayout();
 			this.groupBox4.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dtg_us_nvr)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtg_host_lane)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtg_vr1_mlg)).BeginInit();
 			this.groupBox5.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dtg_vendor)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtg_us_nvr)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// flowLayoutPanel1
@@ -485,7 +489,8 @@ namespace FiberTreid_CFP_Reader
 			this.dtg_cfp_nvr.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.desc,
             this.Column2,
-            this.data});
+            this.data,
+            this.Column4});
 			this.dtg_cfp_nvr.Location = new System.Drawing.Point(12, 50);
 			this.dtg_cfp_nvr.Name = "dtg_cfp_nvr";
 			this.dtg_cfp_nvr.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -495,29 +500,6 @@ namespace FiberTreid_CFP_Reader
 			this.dtg_cfp_nvr.Size = new System.Drawing.Size(181, 228);
 			this.dtg_cfp_nvr.TabIndex = 38;
 			this.dtg_cfp_nvr.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dtg_cfp_nvr_CellParsing);
-			// 
-			// desc
-			// 
-			this.desc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-			this.desc.HeaderText = "Desc";
-			this.desc.Name = "desc";
-			this.desc.ReadOnly = true;
-			this.desc.Width = 5;
-			// 
-			// Column2
-			// 
-			this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-			this.Column2.HeaderText = "addr";
-			this.Column2.Name = "Column2";
-			this.Column2.ReadOnly = true;
-			this.Column2.Width = 5;
-			// 
-			// data
-			// 
-			this.data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-			this.data.HeaderText = "hex";
-			this.data.Name = "data";
-			this.data.Width = 5;
 			// 
 			// tb_phyaddr
 			// 
@@ -553,52 +535,6 @@ namespace FiberTreid_CFP_Reader
 			this.label15.TabIndex = 33;
 			this.label15.Text = "DEVADD";
 			// 
-			// dtg_vendor
-			// 
-			this.dtg_vendor.AllowUserToAddRows = false;
-			this.dtg_vendor.AllowUserToDeleteRows = false;
-			this.dtg_vendor.AllowUserToResizeRows = false;
-			this.dtg_vendor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dtg_vendor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-			this.dtg_vendor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.dtg_vendor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-			this.dtg_vendor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn7});
-			this.dtg_vendor.Location = new System.Drawing.Point(348, 50);
-			this.dtg_vendor.Name = "dtg_vendor";
-			this.dtg_vendor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.dtg_vendor.RowHeadersVisible = false;
-			dataGridViewCellStyle2.Format = "X04";
-			this.dtg_vendor.RowsDefaultCellStyle = dataGridViewCellStyle2;
-			this.dtg_vendor.Size = new System.Drawing.Size(181, 228);
-			this.dtg_vendor.TabIndex = 38;
-			this.dtg_vendor.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dtg_vendor_CellParsing);
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-			this.dataGridViewTextBoxColumn1.HeaderText = "Desc";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.ReadOnly = true;
-			this.dataGridViewTextBoxColumn1.Width = 5;
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-			this.dataGridViewTextBoxColumn2.HeaderText = "addr";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			this.dataGridViewTextBoxColumn2.ReadOnly = true;
-			this.dataGridViewTextBoxColumn2.Width = 5;
-			// 
-			// dataGridViewTextBoxColumn7
-			// 
-			this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-			this.dataGridViewTextBoxColumn7.HeaderText = "hex";
-			this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-			this.dataGridViewTextBoxColumn7.Width = 5;
-			// 
 			// dtg_net_lane
 			// 
 			this.dtg_net_lane.AllowUserToAddRows = false;
@@ -616,9 +552,9 @@ namespace FiberTreid_CFP_Reader
 			this.dtg_net_lane.Name = "dtg_net_lane";
 			this.dtg_net_lane.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.dtg_net_lane.RowHeadersVisible = false;
-			dataGridViewCellStyle3.Format = "x04";
-			dataGridViewCellStyle3.NullValue = null;
-			this.dtg_net_lane.RowsDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle2.Format = "x04";
+			dataGridViewCellStyle2.NullValue = null;
+			this.dtg_net_lane.RowsDefaultCellStyle = dataGridViewCellStyle2;
 			this.dtg_net_lane.Size = new System.Drawing.Size(181, 228);
 			this.dtg_net_lane.TabIndex = 38;
 			this.dtg_net_lane.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dtg_net_lane_CellParsing);
@@ -689,6 +625,7 @@ namespace FiberTreid_CFP_Reader
 			// 
 			// groupBox2
 			// 
+			this.groupBox2.Controls.Add(this.dtg_vendor);
 			this.groupBox2.Location = new System.Drawing.Point(343, 34);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(335, 254);
@@ -720,53 +657,6 @@ namespace FiberTreid_CFP_Reader
 			this.groupBox4.TabIndex = 40;
 			this.groupBox4.TabStop = false;
 			this.groupBox4.Text = "User NVR (RW)";
-			// 
-			// dtg_us_nvr
-			// 
-			this.dtg_us_nvr.AllowUserToAddRows = false;
-			this.dtg_us_nvr.AllowUserToDeleteRows = false;
-			this.dtg_us_nvr.AllowUserToResizeRows = false;
-			this.dtg_us_nvr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dtg_us_nvr.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-			this.dtg_us_nvr.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.dtg_us_nvr.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-			this.dtg_us_nvr.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn8});
-			this.dtg_us_nvr.Location = new System.Drawing.Point(5, 16);
-			this.dtg_us_nvr.Name = "dtg_us_nvr";
-			this.dtg_us_nvr.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.dtg_us_nvr.RowHeadersVisible = false;
-			dataGridViewCellStyle4.Format = "x04";
-			dataGridViewCellStyle4.NullValue = null;
-			this.dtg_us_nvr.RowsDefaultCellStyle = dataGridViewCellStyle4;
-			this.dtg_us_nvr.Size = new System.Drawing.Size(181, 228);
-			this.dtg_us_nvr.TabIndex = 38;
-			this.dtg_us_nvr.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dtg_net_lane_CellParsing);
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-			this.dataGridViewTextBoxColumn3.HeaderText = "Desc";
-			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-			this.dataGridViewTextBoxColumn3.ReadOnly = true;
-			this.dataGridViewTextBoxColumn3.Width = 5;
-			// 
-			// dataGridViewTextBoxColumn4
-			// 
-			this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-			this.dataGridViewTextBoxColumn4.HeaderText = "addr";
-			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-			this.dataGridViewTextBoxColumn4.ReadOnly = true;
-			this.dataGridViewTextBoxColumn4.Width = 5;
-			// 
-			// dataGridViewTextBoxColumn8
-			// 
-			this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-			this.dataGridViewTextBoxColumn8.HeaderText = "hex";
-			this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-			this.dataGridViewTextBoxColumn8.Width = 5;
 			// 
 			// groupBox6
 			// 
@@ -1015,16 +905,154 @@ namespace FiberTreid_CFP_Reader
 			// file_open
 			// 
 			this.file_open.Name = "file_open";
-			this.file_open.Size = new System.Drawing.Size(131, 22);
+			this.file_open.Size = new System.Drawing.Size(152, 22);
 			this.file_open.Text = "File open...";
 			this.file_open.Click += new System.EventHandler(this.file_open_Click);
 			// 
 			// file_save
 			// 
 			this.file_save.Name = "file_save";
-			this.file_save.Size = new System.Drawing.Size(131, 22);
+			this.file_save.Size = new System.Drawing.Size(152, 22);
 			this.file_save.Text = "File save...";
 			this.file_save.Click += new System.EventHandler(this.file_save_Click);
+			// 
+			// desc
+			// 
+			this.desc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.desc.HeaderText = "Desc";
+			this.desc.Name = "desc";
+			this.desc.ReadOnly = true;
+			this.desc.Width = 5;
+			// 
+			// Column2
+			// 
+			this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.Column2.HeaderText = "addr";
+			this.Column2.Name = "Column2";
+			this.Column2.ReadOnly = true;
+			this.Column2.Width = 5;
+			// 
+			// data
+			// 
+			this.data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.data.HeaderText = "hex";
+			this.data.Name = "data";
+			this.data.Width = 5;
+			// 
+			// Column4
+			// 
+			this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.Column4.HeaderText = "ASCII";
+			this.Column4.Name = "Column4";
+			this.Column4.Width = 5;
+			// 
+			// dtg_vendor
+			// 
+			this.dtg_vendor.AllowUserToAddRows = false;
+			this.dtg_vendor.AllowUserToDeleteRows = false;
+			this.dtg_vendor.AllowUserToResizeRows = false;
+			this.dtg_vendor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dtg_vendor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			this.dtg_vendor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.dtg_vendor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+			this.dtg_vendor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn16});
+			this.dtg_vendor.Location = new System.Drawing.Point(6, 16);
+			this.dtg_vendor.Name = "dtg_vendor";
+			this.dtg_vendor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dtg_vendor.RowHeadersVisible = false;
+			dataGridViewCellStyle3.Format = "X04";
+			this.dtg_vendor.RowsDefaultCellStyle = dataGridViewCellStyle3;
+			this.dtg_vendor.Size = new System.Drawing.Size(181, 228);
+			this.dtg_vendor.TabIndex = 38;
+			this.dtg_vendor.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dtg_cfp_nvr_CellParsing);
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.dataGridViewTextBoxColumn1.HeaderText = "Desc";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			this.dataGridViewTextBoxColumn1.Width = 5;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.dataGridViewTextBoxColumn2.HeaderText = "addr";
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.ReadOnly = true;
+			this.dataGridViewTextBoxColumn2.Width = 5;
+			// 
+			// dataGridViewTextBoxColumn7
+			// 
+			this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.dataGridViewTextBoxColumn7.HeaderText = "hex";
+			this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+			this.dataGridViewTextBoxColumn7.Width = 5;
+			// 
+			// dataGridViewTextBoxColumn16
+			// 
+			this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.dataGridViewTextBoxColumn16.HeaderText = "ASCII";
+			this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+			this.dataGridViewTextBoxColumn16.Width = 5;
+			// 
+			// dtg_us_nvr
+			// 
+			this.dtg_us_nvr.AllowUserToAddRows = false;
+			this.dtg_us_nvr.AllowUserToDeleteRows = false;
+			this.dtg_us_nvr.AllowUserToResizeRows = false;
+			this.dtg_us_nvr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dtg_us_nvr.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			this.dtg_us_nvr.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.dtg_us_nvr.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+			this.dtg_us_nvr.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn17});
+			this.dtg_us_nvr.Location = new System.Drawing.Point(5, 16);
+			this.dtg_us_nvr.Name = "dtg_us_nvr";
+			this.dtg_us_nvr.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dtg_us_nvr.RowHeadersVisible = false;
+			dataGridViewCellStyle4.Format = "X04";
+			this.dtg_us_nvr.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			this.dtg_us_nvr.Size = new System.Drawing.Size(181, 228);
+			this.dtg_us_nvr.TabIndex = 38;
+			this.dtg_us_nvr.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dtg_cfp_nvr_CellParsing);
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.dataGridViewTextBoxColumn3.HeaderText = "Desc";
+			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+			this.dataGridViewTextBoxColumn3.ReadOnly = true;
+			this.dataGridViewTextBoxColumn3.Width = 5;
+			// 
+			// dataGridViewTextBoxColumn4
+			// 
+			this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.dataGridViewTextBoxColumn4.HeaderText = "addr";
+			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+			this.dataGridViewTextBoxColumn4.ReadOnly = true;
+			this.dataGridViewTextBoxColumn4.Width = 5;
+			// 
+			// dataGridViewTextBoxColumn8
+			// 
+			this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.dataGridViewTextBoxColumn8.HeaderText = "hex";
+			this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+			this.dataGridViewTextBoxColumn8.Width = 5;
+			// 
+			// dataGridViewTextBoxColumn17
+			// 
+			this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+			this.dataGridViewTextBoxColumn17.HeaderText = "ASCII";
+			this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+			this.dataGridViewTextBoxColumn17.Width = 5;
 			// 
 			// form1
 			// 
@@ -1039,7 +1067,6 @@ namespace FiberTreid_CFP_Reader
 			this.Controls.Add(this.label14);
 			this.Controls.Add(this.tb_devaddr);
 			this.Controls.Add(this.dtg_net_lane);
-			this.Controls.Add(this.dtg_vendor);
 			this.Controls.Add(this.label15);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.menuStrip1);
@@ -1087,19 +1114,20 @@ namespace FiberTreid_CFP_Reader
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtg_cfp_nvr)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtg_vendor)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtg_net_lane)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
 			this.groupBox4.ResumeLayout(false);
 			this.groupBox4.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dtg_us_nvr)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtg_host_lane)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtg_vr1_mlg)).EndInit();
 			this.groupBox5.ResumeLayout(false);
 			this.groupBox5.PerformLayout();
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dtg_vendor)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtg_us_nvr)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1189,13 +1217,6 @@ namespace FiberTreid_CFP_Reader
         private Label label14;
         private TextBox tb_devaddr;
         private Label label15;
-		private DataGridViewTextBoxColumn desc;
-		private DataGridViewTextBoxColumn Column2;
-		private DataGridViewTextBoxColumn data;
-		private DataGridView dtg_vendor;
-		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
 		private DataGridView dtg_net_lane;
 		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
 		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -1204,10 +1225,6 @@ namespace FiberTreid_CFP_Reader
 		private GroupBox groupBox2;
 		private GroupBox groupBox3;
 		private GroupBox groupBox4;
-		private DataGridView dtg_us_nvr;
-		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
 		private GroupBox groupBox6;
 		private Button btn_host_lane;
 		private Button btn_write_host_lane;
@@ -1237,6 +1254,20 @@ namespace FiberTreid_CFP_Reader
 		private Button btn_read_one;
 		private TextBox tb_hexaddr;
 		private Label label5;
+		private DataGridViewTextBoxColumn desc;
+		private DataGridViewTextBoxColumn Column2;
+		private DataGridViewTextBoxColumn data;
+		private DataGridViewTextBoxColumn Column4;
+		private DataGridView dtg_vendor;
+		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+		private DataGridView dtg_us_nvr;
+		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+		private DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
 	}
 }
 

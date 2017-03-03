@@ -207,7 +207,7 @@ namespace FiberTreid_CFP_Reader
 								str_label = "CFP NVR1";
 
 							strr = "0x" + string.Format("{0:x2}", (read_buffer[i * 2 + 1])).ToUpper();
-							dtg_cfp_nvr.Rows.Add(str_label, "0x" + string.Format("{0:x4}", (addr)).ToUpper(), strr);
+							dtg_cfp_nvr.Rows.Add(str_label, "0x" + string.Format("{0:x4}", (addr)).ToUpper(), strr,"'"+Convert.ToChar(read_buffer[i * 2 + 1])+"'");
 							++addr;
 
 							//if (addr == 0x81ff)
@@ -279,7 +279,7 @@ namespace FiberTreid_CFP_Reader
 								str_label = "Ven NVR1";
 
 							strr = "0x" + string.Format("{0:x2}", (read_buffer[i * 2 + 1])).ToUpper();
-							dtg_vendor.Rows.Add(str_label, "0x" + string.Format("{0:x4}", (addr)).ToUpper(), strr);
+							dtg_vendor.Rows.Add(str_label, "0x" + string.Format("{0:x4}", (addr)).ToUpper(), strr, "'" + Convert.ToChar(read_buffer[i * 2 + 1]) + "'");
 							++addr;
 
 							//if (addr == 0x81ff)
@@ -438,7 +438,7 @@ namespace FiberTreid_CFP_Reader
 								str_label = "User NVR1";
 
 							strr = "0x" + string.Format("{0:x2}", (read_buffer[i * 2 + 1])).ToUpper();
-							dtg_us_nvr.Rows.Add(str_label, "0x" + string.Format("{0:x4}", (addr)).ToUpper(), strr);
+							dtg_us_nvr.Rows.Add(str_label, "0x" + string.Format("{0:x4}", (addr)).ToUpper(), strr, "'" + Convert.ToChar(read_buffer[i * 2 + 1]) + "'");
 							++addr;
 
 							//if (addr == 0x81ff)
@@ -587,16 +587,17 @@ namespace FiberTreid_CFP_Reader
 					pr_bar.Maximum = dtg_us_nvr.Rows.Count;
 				addr = 0x8800;
 					//сравниваем с тем что в datagrid разницу сразу записываем
-					int j= 0, tmp =0;
+					UInt16 j= 0, tmp =0;
 					cnt = 0;
 					foreach (DataGridViewRow row in dtg_us_nvr.Rows)
 					{
 						if(row.Cells[2].Value.ToString() != local_read_buff[j])//записываем
 						{
 							++cnt;
-							//MDIO_set_addr_reg(addr+j);
-							//tmp = Convert.ToInt16(row.Cells[2].Value);
-							//MDIO_write_word(tmp);
+							tmp = Convert.ToByte(row.Cells[2].Value.ToString(), 16);	//tmp = Convert.ToUInt16(row.Cells[2].Value);
+							MDIO_set_addr_reg(addr + j);
+							
+							MDIO_write_word(tmp);
 						}
 						++j;
 						pr_bar.Value = j;
@@ -829,7 +830,81 @@ namespace FiberTreid_CFP_Reader
 
 		private void btn_write_netw_nvr_Click(object sender, EventArgs e)
 		{
-			if (_serialPort.IsOpen && dtg_us_nvr.Rows.Count != 0)
+			if (_serialPort.IsOpen && dtg_net_lane.Rows.Count != 0)
+			{
+				try
+				{
+					//string strr = "", str_label = "";
+					int count_word = 0x1fe + 1, sub_cnt = 20, addr, cnt = 0;
+					string[] local_read_buff = new string[count_word];
+					//int count_word = 0x01;
+
+
+					//считываем в буффер CFP модуль
+					addr = 0xA200;
+					MDIO_Set_Read_addr_reg_dev(addr);
+					MDIO_read_word_to_buffer(sub_cnt);
+
+					while (count_word > 0)
+					{
+						for (int i = 0; (i < (count_rx_byte >> 1)) && (count_word > 0); i++)
+						{
+							//strr = "0x" + string.Format("{0:x4}", (read_buffer[i * 2] << 8 | read_buffer[i * 2 + 1])).ToUpper();
+							local_read_buff[cnt] = "0x" + string.Format("{0:x4}", (read_buffer[i * 2] << 8 | read_buffer[i * 2 + 1])).ToUpper();
+							++cnt;
+							--count_word;
+							++addr;
+						}
+						MDIO_Set_Read_addr_reg_dev(addr);
+						MDIO_read_word_to_buffer(sub_cnt);
+					}
+
+					pr_bar.Maximum = dtg_net_lane.Rows.Count;
+					addr = 0xA200;
+					//сравниваем с тем что в datagrid разницу сразу записываем
+					int j = 0, tmp = 0;
+					cnt = 0;
+					foreach (DataGridViewRow row in dtg_net_lane.Rows)
+					{
+						if (row.Cells[2].Value.ToString() != local_read_buff[j])//записываем
+						{
+							++cnt;
+							tmp = Convert.ToInt32(row.Cells[2].Value.ToString(), 16);    //tmp = Convert.ToUInt16(row.Cells[2].Value);
+							MDIO_set_addr_reg(addr + j);
+
+							MDIO_write_word(tmp);
+						}
+						++j;
+						pr_bar.Value = j;
+					}
+
+					if (cnt > 0)
+						status_lbl.Text = "Write complete. " + cnt.ToString();
+					else
+						status_lbl.Text = "no differences";
+
+					_serialPort.DiscardInBuffer();
+				}
+				catch (Exception ex)
+				{
+					status_lbl.Text = ex.ToString();
+					//MessageBox.Show(ex.ToString());
+				}
+			}
+
+
+
+
+
+
+
+
+
+
+
+			/*
+
+			if (_serialPort.IsOpen && dtg_net_lane.Rows.Count != 0)
 			{
 				try
 				{
@@ -880,23 +955,24 @@ namespace FiberTreid_CFP_Reader
 
 				}
 			}
+			*/
 		}
 
 		private void dtg_net_lane_CellParsing(object sender, DataGridViewCellParsingEventArgs e)
 		{
-				try
-				{
-					UInt16 hex = (UInt16)Convert.ToInt16(e.Value.ToString(), 16);
-				//int hex = Convert.ToInt32(e.Value.ToString(), 16);
-			//	dtg_net_lane.R
-					e.Value = hex;
-					e.ParsingApplied = true;
-				}
-				catch (Exception ex)
-				{
-					// Not a Valid Hexadecimal
-					status_lbl.Text = ex.ToString();
-				}
+			//	try
+			//	{
+			//		UInt16 hex = (UInt16)Convert.ToInt16(e.Value.ToString(), 16);
+			//	//int hex = Convert.ToInt32(e.Value.ToString(), 16);
+			////	dtg_net_lane.R
+			//		e.Value = hex;
+			//		e.ParsingApplied = true;
+			//	}
+			//	catch (Exception ex)
+			//	{
+			//		// Not a Valid Hexadecimal
+			//		status_lbl.Text = ex.ToString();
+			//	}
 		}
 
 		private void dtg_us_nvr_CellParsing(object sender, DataGridViewCellParsingEventArgs e)
@@ -919,23 +995,6 @@ namespace FiberTreid_CFP_Reader
 
 		private void dtg_vendor_CellParsing(object sender, DataGridViewCellParsingEventArgs e)
 		{
-
-				try
-				{
-				UInt16 hex = (UInt16)Convert.ToInt16(e.Value.ToString(), 16);
-				//UInt16 hex = Convert.ToInt32(e.Value.ToString(), 16);
-					e.Value = hex;
-					e.ParsingApplied = true;
-				}
-				catch (Exception ex)
-				{
-					// Not a Valid Hexadecimal
-					status_lbl.Text = ex.ToString();
-				}
-		}
-
-		private void dtg_cfp_nvr_CellParsing(object sender, DataGridViewCellParsingEventArgs e)
-		{
 			try
 			{
 			UInt16 hex = (UInt16)Convert.ToInt16(e.Value.ToString(), 16);
@@ -948,6 +1007,22 @@ namespace FiberTreid_CFP_Reader
 				// Not a Valid Hexadecimal
 				status_lbl.Text = ex.ToString();
 			}
+		}
+
+		private void dtg_cfp_nvr_CellParsing(object sender, DataGridViewCellParsingEventArgs e)
+		{
+			//try
+			//{
+			//UInt16 hex = (UInt16)Convert.ToInt16(e.Value.ToString(), 16);
+			////UInt16 hex = Convert.ToInt32(e.Value.ToString(), 16);
+			//	e.Value = hex;
+			//	e.ParsingApplied = true;
+			//}
+			//catch (Exception ex)
+			//{
+			//	// Not a Valid Hexadecimal
+			//	status_lbl.Text = ex.ToString();
+			//}
 		}
 
 		private void file_open_Click(object sender, EventArgs e)
@@ -982,9 +1057,9 @@ namespace FiberTreid_CFP_Reader
 							dtg_host_lane.Rows.Clear();
 							DataGridViewRow row = null;
 
-							//"12/16/2016 10:40:11 AM"
-							//"CFP Host: MSA"
-							//"Address, Hex, Decimal, ASCII, MSA Description"
+							//"12/16/2016 10:40:11 AM"							0	
+							//"CFP Host: MSA"									1
+							//"Address, Hex, Decimal, ASCII, MSA Description"	2
 
 							for (int i = 3; i < read_data_csv.Length; i++)//выбираем пары адрес - дата
 							{
@@ -1019,9 +1094,9 @@ namespace FiberTreid_CFP_Reader
 									if (offset < 256 && offset >= 192)
 										str_label = "CFP NVR4";
 
-									strr = "0x" + string.Format("{0:x4}", (data_csv[el + offset, 1] << 8 | data_csv[el + offset + 1,1])).ToUpper();
+									strr = "0x" + string.Format("{0:x2}", (data_csv[el, 1])).ToUpper();
 									if(offset<256)
-										dtg_cfp_nvr.Rows.Add(str_label, "0x" + string.Format("{0:x4}", data_csv[el, 0] + offset).ToUpper(), strr);
+										dtg_cfp_nvr.Rows.Add(str_label, "0x" + string.Format("{0:x4}", data_csv[el, 0]).ToUpper(), strr,"'"+Convert.ToChar(data_csv[el, 1])+"'");
 								}
 
 
@@ -1034,9 +1109,9 @@ namespace FiberTreid_CFP_Reader
 									if (offset < 128 && offset >= 64)
 										str_label = "Ven NVR2";
 
-									strr = "0x" + string.Format("{0:x4}", (data_csv[el + offset, 1] << 8 | data_csv[el + offset + 1, 1])).ToUpper();
+									strr = "0x" + string.Format("{0:x2}", (data_csv[el, 1])).ToUpper();
 									if (offset < 128)
-										dtg_vendor.Rows.Add(str_label, "0x" + string.Format("{0:x4}", data_csv[el, 0] + offset).ToUpper(), strr);
+										dtg_vendor.Rows.Add(str_label, "0x" + string.Format("{0:x4}", data_csv[el, 0] ).ToUpper(), strr,"'" + Convert.ToChar(data_csv[el, 1]) + "'");
 								}
 
 
@@ -1049,9 +1124,9 @@ namespace FiberTreid_CFP_Reader
 									if (offset < 128 && offset >= 64)
 										str_label = "User NVR2";
 
-									strr = "0x" + string.Format("{0:x4}", (data_csv[el+ offset, 1] << 8 | data_csv[el+ offset + 1, 1])).ToUpper();
+									strr = "0x" + string.Format("{0:x2}", data_csv[el, 1]).ToUpper();
 									if (offset < 128)
-										dtg_us_nvr.Rows.Add(str_label, "0x" + string.Format("{0:x4}", data_csv[el, 0]+ offset).ToUpper(), strr);
+										dtg_us_nvr.Rows.Add(str_label, "0x" + string.Format("{0:x4}", data_csv[el, 0]).ToUpper(), strr, "'" + Convert.ToChar(data_csv[el, 1]) + "'");
 								}
 
 
@@ -1131,7 +1206,218 @@ namespace FiberTreid_CFP_Reader
 
 		private void file_save_Click(object sender, EventArgs e)
 		{
+			try
+			{
+				// диалоговое окно
+				var save = new SaveFileDialog
+				{
+					AddExtension = true,
+					DefaultExt = "csv",
+					Filter = @"CSV-файл (*.csv)|*.csv",
+					FilterIndex = 0,
+					RestoreDirectory = true
+				};
 
+				if (save.ShowDialog() != DialogResult.OK) return;
+
+				var sw = new StreamWriter(save.FileName, false, Encoding.UTF8);
+				string str = "";
+				DateTime thisDay = DateTime.Now;
+				sw.WriteLine(thisDay.ToString(System.Globalization.CultureInfo.InvariantCulture));
+				sw.WriteLine("CFP Host: MSA");
+				sw.WriteLine("Address, Hex, Decimal, ASCII, MSA Description");
+
+				foreach (DataGridViewRow row in dtg_cfp_nvr.Rows) //запись
+					if (!row.IsNewRow)
+					{
+
+						foreach (DataGridViewCell cell in row.Cells)
+						{
+							switch(cell.ColumnIndex)
+							{
+								case 0:
+									sw.Write(cell.Value.ToString());
+									sw.Write(" ");
+									break;
+								case 1:
+									str = cell.Value.ToString();
+
+									//sw.Write("("+cell.Value.ToString()+"h)");
+									str=str.Remove(0,2);
+									sw.Write("(" + str +"h)");
+									sw.Write(",");
+									break;
+								case 2:
+									sw.Write(cell.Value.ToString());
+									break;
+								default:
+									break;
+							}
+						}
+						sw.WriteLine();
+					}
+
+
+
+				foreach (DataGridViewRow row in dtg_vendor.Rows) //запись
+					if (!row.IsNewRow)
+					{
+
+						foreach (DataGridViewCell cell in row.Cells)
+						{
+							switch (cell.ColumnIndex)
+							{
+								case 0:
+									sw.Write(cell.Value.ToString());
+									sw.Write(" ");
+									break;
+								case 1:
+									str = cell.Value.ToString();
+
+									//sw.Write("("+cell.Value.ToString()+"h)");
+									str = str.Remove(0, 2);
+									sw.Write("(" + str + "h)");
+									sw.Write(",");
+									break;
+								case 2:
+									sw.Write(cell.Value.ToString());
+									break;
+								default:
+									break;
+							}
+						}
+						sw.WriteLine();
+					}
+
+
+
+				foreach (DataGridViewRow row in dtg_us_nvr.Rows) //запись
+					if (!row.IsNewRow)
+					{
+						foreach (DataGridViewCell cell in row.Cells)
+						{
+							switch (cell.ColumnIndex)
+							{
+								case 0:
+									sw.Write(cell.Value.ToString());
+									sw.Write(" ");
+									break;
+								case 1:
+									str = cell.Value.ToString();
+
+									//sw.Write("("+cell.Value.ToString()+"h)");
+									str = str.Remove(0, 2);
+									sw.Write("(" + str + "h)");
+									sw.Write(",");
+									break;
+								case 2:
+									sw.Write(cell.Value.ToString());
+									break;
+								default:
+									break;
+							}
+						}
+						sw.WriteLine();
+					}
+
+
+				foreach (DataGridViewRow row in dtg_vr1_mlg.Rows) //запись
+					if (!row.IsNewRow)
+					{
+						foreach (DataGridViewCell cell in row.Cells)
+						{
+							switch (cell.ColumnIndex)
+							{
+								case 0:
+									sw.Write(cell.Value.ToString());
+									sw.Write(" ");
+									break;
+								case 1:
+									str = cell.Value.ToString();
+
+									//sw.Write("("+cell.Value.ToString()+"h)");
+									str = str.Remove(0, 2);
+									sw.Write("(" + str + "h)");
+									sw.Write(",");
+									break;
+								case 2:
+									sw.Write(cell.Value.ToString());
+									break;
+								default:
+									break;
+							}
+						}
+						sw.WriteLine();
+					}
+
+
+
+				foreach (DataGridViewRow row in dtg_net_lane.Rows) //запись
+					if (!row.IsNewRow)
+					{
+						foreach (DataGridViewCell cell in row.Cells)
+						{
+							switch (cell.ColumnIndex)
+							{
+								case 0:
+									sw.Write(cell.Value.ToString());
+									sw.Write(" ");
+									break;
+								case 1:
+									str = cell.Value.ToString();
+
+									//sw.Write("("+cell.Value.ToString()+"h)");
+									str = str.Remove(0, 2);
+									sw.Write("(" + str + "h)");
+									sw.Write(",");
+									break;
+								case 2:
+									sw.Write(cell.Value.ToString());
+									break;
+								default:
+									break;
+							}
+						}
+						sw.WriteLine();
+					}
+
+
+				foreach (DataGridViewRow row in dtg_host_lane.Rows) //запись
+					if (!row.IsNewRow)
+					{
+						foreach (DataGridViewCell cell in row.Cells)
+						{
+							switch (cell.ColumnIndex)
+							{
+								case 0:
+									sw.Write(cell.Value.ToString());
+									sw.Write(" ");
+									break;
+								case 1:
+									str = cell.Value.ToString();
+
+									//sw.Write("("+cell.Value.ToString()+"h)");
+									str = str.Remove(0, 2);
+									sw.Write("(" + str + "h)");
+									sw.Write(",");
+									break;
+								case 2:
+									sw.Write(cell.Value.ToString());
+									break;
+								default:
+									break;
+							}
+						}
+						sw.WriteLine();
+					}
+
+				sw.Close();
+			}
+			catch (Exception ex)
+			{
+				status_lbl.Text = ex.ToString();
+				//MessageBox.Show(ex.ToString());
+			}
 		}
 
 		private void btn_cfp_VR1_Click(object sender, EventArgs e)
