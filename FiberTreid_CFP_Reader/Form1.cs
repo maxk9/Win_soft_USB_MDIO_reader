@@ -319,8 +319,8 @@ namespace FiberTreid_CFP_Reader
 					string strr = "   ", str_label = "";
 					byte[] arr = { 0, 0, 0 };
 
-					byte.TryParse(tb_devaddr.Text, out dev);
-					byte.TryParse(tb_phyaddr.Text, out phy);
+					byte.TryParse("1", out dev);
+					byte.TryParse("0", out phy);
 
 					_serialPort.DiscardInBuffer();
 					_serialPort.DiscardOutBuffer();
@@ -331,56 +331,56 @@ namespace FiberTreid_CFP_Reader
 					status_lbl.Text = "read ...";
 
 
-					arr[0] = Convert.ToByte('D');
-					arr[1] = 0;
-					arr[2] = dev;
+					//arr[0] = Convert.ToByte('D');
+					//arr[1] = 0;
+					//arr[2] = dev;
 
-					_serialPort.Write(arr, 0, 3);
+					//_serialPort.Write(arr, 0, 3);
 
-					while (count_rx_byte < 3)
-					{
-						Application.DoEvents();
-					}
+					//while (count_rx_byte < 3)
+					//{
+					//	Application.DoEvents();
+					//}
 
-					// strr = (ascii.GetString(read_buffer));
-					//status_lbl.Text = strr;
-					_serialPort.Read(read_buffer, 0, count_rx_byte);
+					//// strr = (ascii.GetString(read_buffer));
+					////status_lbl.Text = strr;
+					//_serialPort.Read(read_buffer, 0, count_rx_byte);
 
-					if (!((read_buffer[0] == Convert.ToByte('D')) &&
-						(read_buffer[1] == Convert.ToByte('O')) &&
-						(read_buffer[2] == Convert.ToByte('K'))))
-					{
-						status_lbl.Text = "         ";
-						throw new Exception(strr);
-					}
+					//if (!((read_buffer[0] == Convert.ToByte('D')) &&
+					//	(read_buffer[1] == Convert.ToByte('O')) &&
+					//	(read_buffer[2] == Convert.ToByte('K'))))
+					//{
+					//	status_lbl.Text = "         ";
+					//	throw new Exception(strr);
+					//}
 
-					//else
-					//    status_lbl.Text = (ascii.GetString(read_buffer));
-					_serialPort.DiscardInBuffer();
+					////else
+					////    status_lbl.Text = (ascii.GetString(read_buffer));
+					//_serialPort.DiscardInBuffer();
 
-					arr[0] = Convert.ToByte('H');
-					arr[1] = 0;
-					arr[2] = phy;
+					//arr[0] = Convert.ToByte('H');
+					//arr[1] = 0;
+					//arr[2] = phy;
 
-					_serialPort.Write(arr, 0, 3);
+					//_serialPort.Write(arr, 0, 3);
 
-					while (count_rx_byte < 3)
-					{
-						Application.DoEvents();
-					}
+					//while (count_rx_byte < 3)
+					//{
+					//	Application.DoEvents();
+					//}
 
-					_serialPort.Read(read_buffer, 0, count_rx_byte);
-					strr = (ascii.GetString(read_buffer));
+					//_serialPort.Read(read_buffer, 0, count_rx_byte);
+					//strr = (ascii.GetString(read_buffer));
 
-					if (!((read_buffer[0] == Convert.ToByte('H')) &&
-						(read_buffer[1] == Convert.ToByte('O')) &&
-						(read_buffer[2] == Convert.ToByte('K'))))
-					{
-						status_lbl.Text = "         ";
-						throw new Exception(strr);
-					}
+					//if (!((read_buffer[0] == Convert.ToByte('H')) &&
+					//	(read_buffer[1] == Convert.ToByte('O')) &&
+					//	(read_buffer[2] == Convert.ToByte('K'))))
+					//{
+					//	status_lbl.Text = "         ";
+					//	throw new Exception(strr);
+					//}
 
-					_serialPort.DiscardInBuffer();
+					//_serialPort.DiscardInBuffer();
 
 					arr[0] = Convert.ToByte('A');
 					arr[1] = Convert.ToByte((addr >> 8) & 0xFF);
@@ -1586,9 +1586,9 @@ namespace FiberTreid_CFP_Reader
 					//int.TryParse(tb_hexaddr.Text, out addr);
 
 					addr = int.Parse(tb_hexaddr.Text, NumberStyles.HexNumber);
-					//btn_read_one.Text = "0x" + string.Format("{0:x4}", (addr)).ToUpper();
-
-					MDIO_read_ONE_byte_to_buffer(addr);
+                    //btn_read_one.Text = "0x" + string.Format("{0:x4}", (addr)).ToUpper();
+                    MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_read_ONE_byte_to_buffer(addr);
 
 					dtg_cfp_nvr.Rows.Clear();
 
@@ -1618,6 +1618,67 @@ namespace FiberTreid_CFP_Reader
 
 		private void btn_write_mod_VR_Click(object sender, EventArgs e)
 		{
+			if (_serialPort.IsOpen && dtg_net_lane.Rows.Count != 0)
+			{
+				try
+				{
+					//string strr = "", str_label = "";
+					int count_word = 0xff + 1, sub_cnt = 20, addr, cnt = 0;
+					string[] local_read_buff = new string[count_word];
+					//int count_word = 0x01;
+
+
+					//считываем в буффер CFP модуль
+					addr = 0xA000;
+					MDIO_Set_Read_addr_reg_dev(addr);
+					MDIO_read_word_to_buffer(sub_cnt);
+
+					while (count_word > 0)
+					{
+						for (int i = 0; (i < (count_rx_byte >> 1)) && (count_word > 0); i++)
+						{
+							//strr = "0x" + string.Format("{0:x4}", (read_buffer[i * 2] << 8 | read_buffer[i * 2 + 1])).ToUpper();
+							local_read_buff[cnt] = "0x" + string.Format("{0:x4}", (read_buffer[i * 2] << 8 | read_buffer[i * 2 + 1])).ToUpper();
+							++cnt;
+							--count_word;
+							++addr;
+						}
+						MDIO_Set_Read_addr_reg_dev(addr);
+						MDIO_read_word_to_buffer(sub_cnt);
+					}
+
+					pr_bar.Maximum = dtg_vr1_mlg.Rows.Count;
+					addr = 0xA000;
+					//сравниваем с тем что в datagrid разницу сразу записываем
+					int j = 0, tmp = 0;
+					cnt = 0;
+					foreach (DataGridViewRow row in dtg_vr1_mlg.Rows)
+					{
+						if (row.Cells[2].Value.ToString() != local_read_buff[j])//записываем
+						{
+							++cnt;
+							tmp = Convert.ToInt32(row.Cells[2].Value.ToString(), 16);    //tmp = Convert.ToUInt16(row.Cells[2].Value);
+							MDIO_set_addr_reg(addr + j);
+
+							MDIO_write_word(tmp);
+						}
+						++j;
+						pr_bar.Value = j;
+					}
+
+					if (cnt > 0)
+						status_lbl.Text = "Write complete. " + cnt.ToString();
+					else
+						status_lbl.Text = "no differences";
+
+					_serialPort.DiscardInBuffer();
+				}
+				catch (Exception ex)
+				{
+					status_lbl.Text = ex.ToString();
+					//MessageBox.Show(ex.ToString());
+				}
+			}
 
 		}
 
@@ -1625,5 +1686,10 @@ namespace FiberTreid_CFP_Reader
 		{
 
 		}
-	}
+
+        private void btn_stat_read_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
