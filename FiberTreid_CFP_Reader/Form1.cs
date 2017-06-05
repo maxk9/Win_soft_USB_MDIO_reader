@@ -197,13 +197,13 @@ namespace FiberTreid_CFP_Reader
 						{
 							--count_word;
 							
-							if (count_word < 0x7F)
+							if (count_word <= 0x7F)
 								str_label = "CFP NVR4";
-							if (count_word < 0xFF && count_word >= 0x7F)
+							if (count_word <= 0xFF && count_word > 0x7F)
 								str_label = "CFP NVR3";
-							if (count_word < 0x17F && count_word >= 0xFF)
+							if (count_word <= 0x17F && count_word > 0xFF)
 								str_label = "CFP NVR2";
-							if (count_word >= 0x17F)
+							if (count_word > 0x17F)
 								str_label = "CFP NVR1";
 
 							strr = "0x" + string.Format("{0:x2}", (read_buffer[i * 2 + 1])).ToUpper();

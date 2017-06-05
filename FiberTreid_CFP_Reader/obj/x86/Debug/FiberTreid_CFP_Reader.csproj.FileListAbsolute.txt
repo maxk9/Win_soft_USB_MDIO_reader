@@ -1,0 +1,9 @@
+D:\PROJECT\pgm\Win\FiberTreid_CFP_Reader\FiberTreid_CFP_Reader\bin\x86\Debug\FiberTreid_CFP_Reader.exe.config
+D:\PROJECT\pgm\Win\FiberTreid_CFP_Reader\FiberTreid_CFP_Reader\bin\x86\Debug\FiberTreid_CFP_Reader.exe
+D:\PROJECT\pgm\Win\FiberTreid_CFP_Reader\FiberTreid_CFP_Reader\bin\x86\Debug\FiberTreid_CFP_Reader.pdb
+D:\PROJECT\pgm\Win\FiberTreid_CFP_Reader\FiberTreid_CFP_Reader\obj\x86\Debug\FiberTreid_CFP_Reader.csprojResolveAssemblyReference.cache
+D:\PROJECT\pgm\Win\FiberTreid_CFP_Reader\FiberTreid_CFP_Reader\obj\x86\Debug\FiberTreid_CFP_Reader.form1.resources
+D:\PROJECT\pgm\Win\FiberTreid_CFP_Reader\FiberTreid_CFP_Reader\obj\x86\Debug\FiberTreid_CFP_Reader.Properties.Resources.resources
+D:\PROJECT\pgm\Win\FiberTreid_CFP_Reader\FiberTreid_CFP_Reader\obj\x86\Debug\FiberTreid_CFP_Reader.csproj.GenerateResource.Cache
+D:\PROJECT\pgm\Win\FiberTreid_CFP_Reader\FiberTreid_CFP_Reader\obj\x86\Debug\FiberTreid_CFP_Reader.exe
+D:\PROJECT\pgm\Win\FiberTreid_CFP_Reader\FiberTreid_CFP_Reader\obj\x86\Debug\FiberTreid_CFP_Reader.pdb
