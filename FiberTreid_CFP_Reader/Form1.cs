@@ -74,7 +74,9 @@ namespace FiberTreid_CFP_Reader
 			status_date.Text = System.DateTime.Today.ToLongDateString();
 
 			Array.Clear(read_buffer, 0, read_buffer.Length);
-		}
+            timer1.Start();
+
+        }
 
 		private string CharArrayToString(Char[] strM1)
 		{
@@ -132,6 +134,7 @@ namespace FiberTreid_CFP_Reader
 					_serialPort.DtrEnable = true;
 					_serialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 
+
 					// Set the read/write timeouts
 					_serialPort.ReadTimeout = 300;
 					_serialPort.WriteTimeout = 300;
@@ -140,7 +143,23 @@ namespace FiberTreid_CFP_Reader
 					{
 						_serialPort.Open();
 						connect.Enabled = false;
-						break;
+
+                        btn_read_cfp_nvr.Enabled = true;
+                        btn_read_ven_nvr.Enabled = true;
+                        btn_read_user_nvr.Enabled = true;
+                        btn_write_user_nvr.Enabled = true;
+                        btn_cfp_VR1.Enabled = true;
+                        btn_write_mod_VR.Enabled = true;
+                        btn_write_netw_nvr.Enabled = true;
+                        btn_read_netw_nvr.Enabled = true;
+                        btn_host_lane.Enabled = true;
+                        btn_write_host_lane.Enabled = true;
+                        btn_read_all.Enabled = true;
+                        btn_read_one.Enabled = true;
+                        t_st_stLBL_mod_abs.Enabled = true;
+
+
+                        break;
 					}
 					catch (ArgumentNullException)
 					{
@@ -186,7 +205,7 @@ namespace FiberTreid_CFP_Reader
 					//int count_word = 0x01;
 
 					addr = 0x8000;
-					MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_set_addr_reg(addr);
 					MDIO_read_word_to_buffer(sub_cnt);
 
 					dtg_cfp_nvr.Rows.Clear();
@@ -214,7 +233,7 @@ namespace FiberTreid_CFP_Reader
 							//	--count_word;
 						}
 
-						MDIO_Set_Read_addr_reg_dev(addr);
+                        MDIO_set_addr_reg(addr);
 						MDIO_read_word_to_buffer(sub_cnt);
 					}
 
@@ -235,11 +254,12 @@ namespace FiberTreid_CFP_Reader
 			}
 		}
 
-		private void btn_write_cfp_nvr_Click(object sender, EventArgs e)
-		{
-			if (_serialPort.IsOpen)
-			{ }
-		}
+        private void btn_write_cfp_nvr_Click(object sender, EventArgs e)
+        {
+            if (_serialPort.IsOpen && dtg_cfp_nvr.Rows.Count != 0)
+            {
+            }
+        }
 
 		private void form1_FormClosing(object sender, FormClosingEventArgs e)
 		{
@@ -247,7 +267,8 @@ namespace FiberTreid_CFP_Reader
 			{
 				_serialPort.Close();
 			}
-		}
+            timer1.Stop();
+        }
 
 		private void btn_read_ven_nvr_Click(object sender, EventArgs e)
 		{
@@ -262,7 +283,7 @@ namespace FiberTreid_CFP_Reader
 					//int count_word = 0x01;
 
 					addr = 0x8400;
-					MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_set_addr_reg(addr);
 					MDIO_read_word_to_buffer(sub_cnt);
 
 					dtg_vendor.Rows.Clear();
@@ -286,7 +307,7 @@ namespace FiberTreid_CFP_Reader
 							//	--count_word;
 						}
 
-						MDIO_Set_Read_addr_reg_dev(addr);
+                        MDIO_set_addr_reg(addr);
 						MDIO_read_word_to_buffer(sub_cnt);
 					}
 
@@ -421,7 +442,7 @@ namespace FiberTreid_CFP_Reader
 					//int count_word = 0x01;
 
 					addr = 0x8800;
-					MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_set_addr_reg(addr);
 					MDIO_read_word_to_buffer(sub_cnt);
 
 					dtg_us_nvr.Rows.Clear();
@@ -445,7 +466,7 @@ namespace FiberTreid_CFP_Reader
 							//	--count_word;
 						}
 
-						MDIO_Set_Read_addr_reg_dev(addr);
+                        MDIO_set_addr_reg(addr);
 						MDIO_read_word_to_buffer(sub_cnt);
 					}
 
@@ -481,7 +502,7 @@ namespace FiberTreid_CFP_Reader
 					//int count_word = 0x01;
 
 					addr = 0xA200;
-					MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_set_addr_reg(addr);
 					MDIO_read_word_to_buffer(sub_cnt);
 
 					dtg_net_lane.Rows.Clear();
@@ -508,7 +529,7 @@ namespace FiberTreid_CFP_Reader
 							//	--count_word;
 						}
 
-						MDIO_Set_Read_addr_reg_dev(addr);
+                        MDIO_set_addr_reg(addr);
 						MDIO_read_word_to_buffer(sub_cnt);
 					}
 
@@ -568,7 +589,7 @@ namespace FiberTreid_CFP_Reader
 
 					//считываем в буффер CFP модуль
 				addr = 0x8800;
-					MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_set_addr_reg(addr);
 					MDIO_read_word_to_buffer(sub_cnt);
 
 					while (count_word > 0)
@@ -580,7 +601,7 @@ namespace FiberTreid_CFP_Reader
 							--count_word;
 							++addr;
 						}
-						MDIO_Set_Read_addr_reg_dev(addr);
+                        MDIO_set_addr_reg(addr);
 						MDIO_read_word_to_buffer(sub_cnt);
 					}
 
@@ -625,8 +646,9 @@ namespace FiberTreid_CFP_Reader
 				{
 					string strr = "   ";
 					byte[] arr = { 0, 0, 0 };
+                    timer1.Stop();
 
-					_serialPort.DiscardInBuffer();
+                    _serialPort.DiscardInBuffer();
 
 					arr[0] = Convert.ToByte('A');
 					arr[1] = Convert.ToByte((addr >> 8) & 0xFF);
@@ -646,7 +668,9 @@ namespace FiberTreid_CFP_Reader
 						(read_buffer[1] == Convert.ToByte('O')) &&
 						(read_buffer[2] == Convert.ToByte('K'))))
 						throw new Exception(strr);
-				}
+
+                    timer1.Start();
+                }
 				catch (Exception ex)
 				{
 					status_lbl.Text = ex.ToString();
@@ -662,8 +686,9 @@ namespace FiberTreid_CFP_Reader
 				try
 				{
 					byte[] arr = { 0, 0, 0 };
+                    timer1.Stop();
 
-					_serialPort.DiscardInBuffer();
+                    _serialPort.DiscardInBuffer();
 					_serialPort.DiscardOutBuffer();
 
 					count_rx_byte = 0;
@@ -693,7 +718,8 @@ namespace FiberTreid_CFP_Reader
 					pr_bar.Value = count_rx_byte;
 
 					_serialPort.Read(read_buffer, 0, count_rx_byte);
-				}
+                    timer1.Start();
+                }
 				catch (Exception ex)
 				{
 					status_lbl.Text = ex.ToString();
@@ -709,8 +735,9 @@ namespace FiberTreid_CFP_Reader
 				try
 				{
 					byte[] arr = { 0, 0, 0 };
+                    timer1.Stop();
 
-					_serialPort.DiscardInBuffer();
+                    _serialPort.DiscardInBuffer();
 					Array.Clear(read_buffer, 0, read_buffer.Length);
 
 					arr[0] = Convert.ToByte('C');
@@ -735,7 +762,9 @@ namespace FiberTreid_CFP_Reader
 					}
 
 					_serialPort.Read(read_buffer, 0, count_rx_byte);
-				}
+
+                    timer1.Start();
+                }
 				catch (Exception ex)
 				{
 					status_lbl.Text = ex.ToString();
@@ -751,8 +780,9 @@ namespace FiberTreid_CFP_Reader
 				try
 				{
 					byte[] arr = { 0, 0, 0 };
+                    timer1.Stop();
 
-					_serialPort.DiscardInBuffer();
+                    _serialPort.DiscardInBuffer();
 					Array.Clear(read_buffer, 0, read_buffer.Length);
 
 					arr[0] = Convert.ToByte('V');
@@ -778,7 +808,8 @@ namespace FiberTreid_CFP_Reader
 					}
 
 					_serialPort.Read(read_buffer, 0, count_rx_byte);
-				}
+                    timer1.Start();
+                }
 				catch (Exception ex)
 				{
 					status_lbl.Text = ex.ToString();
@@ -796,7 +827,10 @@ namespace FiberTreid_CFP_Reader
 					string strr = "   ";
 					byte[] arr = { 0, 0, 0 };
 
-					_serialPort.DiscardInBuffer();
+                    timer1.Stop();
+
+
+                    _serialPort.DiscardInBuffer();
 
 					arr[0] = Convert.ToByte('W');
 					arr[1] = Convert.ToByte((data_write >> 8) & 0xFF);
@@ -818,7 +852,9 @@ namespace FiberTreid_CFP_Reader
 						(read_buffer[1] == Convert.ToByte('O')) &&
 						(read_buffer[2] == Convert.ToByte('K'))))
 						throw new Exception(strr);
-				}
+
+                    timer1.Start();
+                }
 				catch (Exception ex)
 				{
 					status_lbl.Text = ex.ToString();
@@ -842,7 +878,7 @@ namespace FiberTreid_CFP_Reader
 
 					//считываем в буффер CFP модуль
 					addr = 0xA200;
-					MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_set_addr_reg(addr);
 					MDIO_read_word_to_buffer(sub_cnt);
 
 					while (count_word > 0)
@@ -855,7 +891,7 @@ namespace FiberTreid_CFP_Reader
 							--count_word;
 							++addr;
 						}
-						MDIO_Set_Read_addr_reg_dev(addr);
+                        MDIO_set_addr_reg(addr);
 						MDIO_read_word_to_buffer(sub_cnt);
 					}
 
@@ -1432,7 +1468,7 @@ namespace FiberTreid_CFP_Reader
 					//int count_word = 0x01;
 
 					addr = 0xA000;
-					MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_set_addr_reg(addr);
 					MDIO_read_word_to_buffer(sub_cnt);
 
 					dtg_vr1_mlg.Rows.Clear();
@@ -1458,7 +1494,7 @@ namespace FiberTreid_CFP_Reader
 							//	--count_word;
 						}
 
-						MDIO_Set_Read_addr_reg_dev(addr);
+                        MDIO_set_addr_reg(addr);
 						MDIO_read_word_to_buffer(sub_cnt);
 					}
 
@@ -1493,7 +1529,7 @@ namespace FiberTreid_CFP_Reader
 					//int count_word = 0x01;
 
 					addr = 0xA400;
-					MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_set_addr_reg(addr);
 					MDIO_read_word_to_buffer(sub_cnt);
 
 					dtg_host_lane.Rows.Clear();
@@ -1515,7 +1551,7 @@ namespace FiberTreid_CFP_Reader
 							//	--count_word;
 						}
 
-						MDIO_Set_Read_addr_reg_dev(addr);
+                        MDIO_set_addr_reg(addr);
 						MDIO_read_word_to_buffer(sub_cnt);
 					}
 
@@ -1523,7 +1559,7 @@ namespace FiberTreid_CFP_Reader
 					addr = 0xAC00;
 					count_word = 1023+1;
 
-					MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_set_addr_reg(addr);
 					MDIO_read_word_to_buffer(sub_cnt);
 
 					while (count_word > 0)
@@ -1547,7 +1583,7 @@ namespace FiberTreid_CFP_Reader
 							//	--count_word;
 						}
 
-						MDIO_Set_Read_addr_reg_dev(addr);
+                        MDIO_set_addr_reg(addr);
 						MDIO_read_word_to_buffer(sub_cnt);
 					}
 
@@ -1580,21 +1616,20 @@ namespace FiberTreid_CFP_Reader
 					string strr = "   ";//, str_label = "";
 				//	byte dev = 0, phy = 0;
 					int addr = 0x8008;
-					//int count_word = 0x01;
+                    //int count_word = 0x01;
 
-					//MDIO_Set_Read_addr_reg_dev(0x8000);
-					//int.TryParse(tb_hexaddr.Text, out addr);
+                    //MDIO_set_addr_reg(0x8000);
+                    //int.TryParse(tb_hexaddr.Text, out addr);
 
-					addr = int.Parse(tb_hexaddr.Text, NumberStyles.HexNumber);
+                    addr = int.Parse(tb_hexaddr.Text, NumberStyles.HexNumber);
                     //btn_read_one.Text = "0x" + string.Format("{0:x4}", (addr)).ToUpper();
-                    MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_set_addr_reg(addr);
                     MDIO_read_ONE_byte_to_buffer(addr);
 
-					dtg_cfp_nvr.Rows.Clear();
 
-					strr = "0x" + string.Format("{0:x4}", (read_buffer[0] << 8 | read_buffer[1])).ToUpper();
-					//str_label = "addr";
-					dtg_cfp_nvr.Rows.Add("", "0x" + string.Format("{0:x4}", (addr)).ToUpper(), strr);
+					strr =string.Format("{0:x4}", (read_buffer[0] << 8 | read_buffer[1])).ToUpper();
+                    //str_label = "addr";
+                    tb_read_data.Text = strr;
 
 					status_lbl.Text = "Read complete. " + count_rx_byte.ToString();
 
@@ -1630,7 +1665,7 @@ namespace FiberTreid_CFP_Reader
 
 					//считываем в буффер CFP модуль
 					addr = 0xA000;
-					MDIO_Set_Read_addr_reg_dev(addr);
+                    MDIO_set_addr_reg(addr);
 					MDIO_read_word_to_buffer(sub_cnt);
 
 					while (count_word > 0)
@@ -1643,7 +1678,7 @@ namespace FiberTreid_CFP_Reader
 							--count_word;
 							++addr;
 						}
-						MDIO_Set_Read_addr_reg_dev(addr);
+                        MDIO_set_addr_reg(addr);
 						MDIO_read_word_to_buffer(sub_cnt);
 					}
 
@@ -1687,9 +1722,171 @@ namespace FiberTreid_CFP_Reader
 
 		}
 
-        private void btn_stat_read_Click(object sender, EventArgs e)
+        private void btn_stat_write_Click(object sender, EventArgs e)
+        {
+            if (_serialPort.IsOpen)
+            {
+                try
+                {
+                    int addr = 0x8008, data_hex = 0;
+                    //int count_word = 0x01;
+
+                    //MDIO_set_addr_reg(0x8000);
+                    //int.TryParse(tb_hexaddr.Text, out addr);
+
+                    addr = int.Parse(tb_hexaddr.Text, NumberStyles.HexNumber);
+
+                    data_hex = int.Parse(tb_read_data.Text, NumberStyles.HexNumber);
+
+                    MDIO_set_addr_reg(addr);
+                    MDIO_write_word(data_hex);
+                    status_lbl.Text = "write ok";
+                }
+                catch (Exception ex)
+                {
+                    status_lbl.Text = ex.ToString();
+                    //MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+
+        private void tb_read_data_TextChanged(object sender, EventArgs e)
+        {
+            btn_stat_write.Enabled = true;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_serialPort.IsOpen)
+                {
+                    string strr = "   ";
+                    byte[] arr = { 0, 0, 0 };
+
+                    _serialPort.DiscardInBuffer();
+
+                    arr[0] = Convert.ToByte('S');
+
+                    _serialPort.Write(arr, 0, 3);
+
+                    while (count_rx_byte < 3)
+                    {
+                        Application.DoEvents();
+                    }
+
+                    _serialPort.Read(read_buffer, 0, count_rx_byte);
+                    strr = (ascii.GetString(read_buffer));
+
+                    if (((read_buffer[0] == Convert.ToByte('S')) &&
+                        (read_buffer[1] == Convert.ToByte('0')) &&
+                        (read_buffer[2] == Convert.ToByte('0'))))
+                    {
+                        t_st_stLBL_mod_abs.Text = "NOT insert";
+                        t_st_stLBL_mod_abs.BackColor = Color.Red;
+                        ch_b_reset.Enabled = false;
+                    }
+                    else
+                        if (((read_buffer[0] == Convert.ToByte('S')) &&
+                        (read_buffer[1] == Convert.ToByte('0')) &&
+                        (read_buffer[2] == Convert.ToByte('1'))))
+                    {
+                        t_st_stLBL_mod_abs.Text = "insert";
+                        t_st_stLBL_mod_abs.BackColor = Color.Lime;
+                        ch_b_reset.Enabled = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                status_lbl.Text = ex.ToString();
+                //MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void ch_b_reset_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ch_b_reset.Checked)
+                {
+                    string strr = "   ";
+                    byte[] arr = { 0, 0, 0 };
+
+                    _serialPort.DiscardInBuffer();
+
+                    arr[0] = Convert.ToByte('P');
+
+                    _serialPort.Write(arr, 0, 3);
+
+                    while (count_rx_byte < 3)
+                    {
+                        Application.DoEvents();
+                    }
+
+                    _serialPort.Read(read_buffer, 0, count_rx_byte);
+                    strr = (ascii.GetString(read_buffer));
+
+                    if (((read_buffer[0] == Convert.ToByte('P')) &&
+                        (read_buffer[1] == Convert.ToByte('O')) &&
+                        (read_buffer[2] == Convert.ToByte('K'))))
+                    {
+                        status_lbl.Text = "reset OK";
+                    }
+                    ch_b_reset.CheckState = CheckState.Unchecked;
+                }
+            }
+            catch (Exception ex)
+            {
+                status_lbl.Text = ex.ToString();
+                //MessageBox.Show(ex.ToString());
+            }
+        }
+
+        //private void btn_stat_read_Click(object sender, EventArgs e)
+        //{
+        //    if (_serialPort.IsOpen)
+        //    {
+        //        try
+        //        {
+
+        //            string strr = "   ";//, str_label = "";
+        //                                //	byte dev = 0, phy = 0;
+        //            int addr = 0xA004;
+        //            //int count_word = 0x01;
+
+        //            //MDIO_set_addr_reg(0x8000);
+        //            //int.TryParse(tb_hexaddr.Text, out addr);
+
+        //          //  addr = int.Parse(tb_hexaddr.Text, NumberStyles.HexNumber);
+        //            //btn_read_one.Text = "0x" + string.Format("{0:x4}", (addr)).ToUpper();
+        //            MDIO_set_addr_reg(addr);
+        //            MDIO_read_ONE_byte_to_buffer(addr);
+
+        //            dtg_cfp_nvr.Rows.Clear();
+
+        //            strr = "0x" + string.Format("{0:x4}", (read_buffer[0] << 8 | read_buffer[1])).ToUpper();
+        //            //str_label = "addr";
+        //            tb_status.Text=strr;
+
+        //            status_lbl.Text = "Read complete. " + count_rx_byte.ToString();
+
+
+        //            _serialPort.DiscardInBuffer();
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            status_lbl.Text = ex.ToString();
+        //            //MessageBox.Show(ex.ToString());
+
+        //        }
+        //    }
+        //}
+
     }
 }

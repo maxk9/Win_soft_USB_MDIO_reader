@@ -30,6 +30,7 @@ namespace FiberTreid_CFP_Reader
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -65,15 +66,16 @@ namespace FiberTreid_CFP_Reader
             this.btn_write_netw_nvr = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.tb_status = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btn_stat_read = new System.Windows.Forms.Button();
             this.btn_stat_write = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.status_lbl = new System.Windows.Forms.ToolStripStatusLabel();
             this.pr_bar = new System.Windows.Forms.ToolStripProgressBar();
             this.status_date = new System.Windows.Forms.ToolStripStatusLabel();
             this.dtg_cfp_nvr = new System.Windows.Forms.DataGridView();
+            this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtg_net_lane = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,15 +123,15 @@ namespace FiberTreid_CFP_Reader
             this.fileOpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.file_open = new System.Windows.Forms.ToolStripMenuItem();
             this.file_save = new System.Windows.Forms.ToolStripMenuItem();
-            this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tb_read_data = new System.Windows.Forms.TextBox();
+            this.t_st_stLBL_mod_abs = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ch_b_reset = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_cfp_nvr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_net_lane)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_vendor)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -165,6 +167,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_read_all
             // 
+            this.btn_read_all.Enabled = false;
             this.btn_read_all.Location = new System.Drawing.Point(203, 3);
             this.btn_read_all.Name = "btn_read_all";
             this.btn_read_all.Size = new System.Drawing.Size(133, 23);
@@ -175,15 +178,18 @@ namespace FiberTreid_CFP_Reader
             // 
             // button6
             // 
+            this.button6.Enabled = false;
             this.button6.Location = new System.Drawing.Point(342, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(133, 23);
             this.button6.TabIndex = 2;
             this.button6.Text = "write all data CFP";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // btn_write_cfp_nvr
             // 
+            this.btn_write_cfp_nvr.Enabled = false;
             this.btn_write_cfp_nvr.Location = new System.Drawing.Point(199, 141);
             this.btn_write_cfp_nvr.Name = "btn_write_cfp_nvr";
             this.btn_write_cfp_nvr.Size = new System.Drawing.Size(133, 23);
@@ -226,6 +232,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_read_cfp_nvr
             // 
+            this.btn_read_cfp_nvr.Enabled = false;
             this.btn_read_cfp_nvr.Location = new System.Drawing.Point(199, 102);
             this.btn_read_cfp_nvr.Name = "btn_read_cfp_nvr";
             this.btn_read_cfp_nvr.Size = new System.Drawing.Size(133, 23);
@@ -236,6 +243,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_read_ven_nvr
             // 
+            this.btn_read_ven_nvr.Enabled = false;
             this.btn_read_ven_nvr.Location = new System.Drawing.Point(535, 102);
             this.btn_read_ven_nvr.Name = "btn_read_ven_nvr";
             this.btn_read_ven_nvr.Size = new System.Drawing.Size(133, 23);
@@ -246,6 +254,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_write_ven_nvr
             // 
+            this.btn_write_ven_nvr.Enabled = false;
             this.btn_write_ven_nvr.Location = new System.Drawing.Point(535, 141);
             this.btn_write_ven_nvr.Name = "btn_write_ven_nvr";
             this.btn_write_ven_nvr.Size = new System.Drawing.Size(133, 23);
@@ -256,6 +265,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_read_user_nvr
             // 
+            this.btn_read_user_nvr.Enabled = false;
             this.btn_read_user_nvr.Location = new System.Drawing.Point(192, 68);
             this.btn_read_user_nvr.Name = "btn_read_user_nvr";
             this.btn_read_user_nvr.Size = new System.Drawing.Size(133, 23);
@@ -266,6 +276,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_write_user_nvr
             // 
+            this.btn_write_user_nvr.Enabled = false;
             this.btn_write_user_nvr.Location = new System.Drawing.Point(192, 107);
             this.btn_write_user_nvr.Name = "btn_write_user_nvr";
             this.btn_write_user_nvr.Size = new System.Drawing.Size(133, 23);
@@ -364,6 +375,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_read_netw_nvr
             // 
+            this.btn_read_netw_nvr.Enabled = false;
             this.btn_read_netw_nvr.Location = new System.Drawing.Point(535, 367);
             this.btn_read_netw_nvr.Name = "btn_read_netw_nvr";
             this.btn_read_netw_nvr.Size = new System.Drawing.Size(133, 23);
@@ -374,6 +386,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_write_netw_nvr
             // 
+            this.btn_write_netw_nvr.Enabled = false;
             this.btn_write_netw_nvr.Location = new System.Drawing.Point(535, 406);
             this.btn_write_netw_nvr.Name = "btn_write_netw_nvr";
             this.btn_write_netw_nvr.Size = new System.Drawing.Size(133, 23);
@@ -398,47 +411,23 @@ namespace FiberTreid_CFP_Reader
             this.textBox4.TabIndex = 15;
             this.textBox4.Text = "0";
             // 
-            // tb_status
-            // 
-            this.tb_status.Location = new System.Drawing.Point(90, 568);
-            this.tb_status.Name = "tb_status";
-            this.tb_status.Size = new System.Drawing.Size(58, 20);
-            this.tb_status.TabIndex = 32;
-            this.tb_status.Text = "0";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 571);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 13);
-            this.label13.TabIndex = 33;
-            this.label13.Text = "status 0xA004";
-            // 
-            // btn_stat_read
-            // 
-            this.btn_stat_read.Location = new System.Drawing.Point(154, 566);
-            this.btn_stat_read.Name = "btn_stat_read";
-            this.btn_stat_read.Size = new System.Drawing.Size(46, 23);
-            this.btn_stat_read.TabIndex = 34;
-            this.btn_stat_read.Text = "read";
-            this.btn_stat_read.UseVisualStyleBackColor = true;
-            this.btn_stat_read.Click += new System.EventHandler(this.btn_stat_read_Click);
-            // 
             // btn_stat_write
             // 
-            this.btn_stat_write.Location = new System.Drawing.Point(206, 566);
+            this.btn_stat_write.Enabled = false;
+            this.btn_stat_write.Location = new System.Drawing.Point(362, 566);
             this.btn_stat_write.Name = "btn_stat_write";
             this.btn_stat_write.Size = new System.Drawing.Size(46, 23);
             this.btn_stat_write.TabIndex = 35;
             this.btn_stat_write.Text = "write";
             this.btn_stat_write.UseVisualStyleBackColor = true;
+            this.btn_stat_write.Click += new System.EventHandler(this.btn_stat_write_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.status_lbl,
             this.pr_bar,
+            this.t_st_stLBL_mod_abs,
             this.status_date});
             this.statusStrip1.Location = new System.Drawing.Point(0, 597);
             this.statusStrip1.Name = "statusStrip1";
@@ -453,7 +442,7 @@ namespace FiberTreid_CFP_Reader
             this.status_lbl.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
             this.status_lbl.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.status_lbl.Name = "status_lbl";
-            this.status_lbl.Size = new System.Drawing.Size(754, 17);
+            this.status_lbl.Size = new System.Drawing.Size(699, 17);
             this.status_lbl.Spring = true;
             this.status_lbl.Text = "Ready...";
             this.status_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -497,6 +486,36 @@ namespace FiberTreid_CFP_Reader
             this.dtg_cfp_nvr.Size = new System.Drawing.Size(181, 228);
             this.dtg_cfp_nvr.TabIndex = 38;
             this.dtg_cfp_nvr.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dtg_cfp_nvr_CellParsing);
+            // 
+            // desc
+            // 
+            this.desc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.desc.HeaderText = "Desc";
+            this.desc.Name = "desc";
+            this.desc.ReadOnly = true;
+            this.desc.Width = 57;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.HeaderText = "addr";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 53;
+            // 
+            // data
+            // 
+            this.data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.data.HeaderText = "hex";
+            this.data.Name = "data";
+            this.data.Width = 49;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column4.HeaderText = "ASCII";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 59;
             // 
             // dtg_net_lane
             // 
@@ -547,9 +566,6 @@ namespace FiberTreid_CFP_Reader
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_read_one);
-            this.groupBox1.Controls.Add(this.tb_hexaddr);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(7, 34);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(335, 254);
@@ -559,28 +575,29 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_read_one
             // 
-            this.btn_read_one.Location = new System.Drawing.Point(192, 194);
+            this.btn_read_one.Enabled = false;
+            this.btn_read_one.Location = new System.Drawing.Point(209, 566);
             this.btn_read_one.Name = "btn_read_one";
             this.btn_read_one.Size = new System.Drawing.Size(133, 23);
             this.btn_read_one.TabIndex = 0;
-            this.btn_read_one.Text = "read 1 byte";
+            this.btn_read_one.Text = "read";
             this.btn_read_one.UseVisualStyleBackColor = true;
             this.btn_read_one.Click += new System.EventHandler(this.btn_read_one_Click_1);
             // 
             // tb_hexaddr
             // 
             this.tb_hexaddr.AcceptsReturn = true;
-            this.tb_hexaddr.Location = new System.Drawing.Point(230, 168);
+            this.tb_hexaddr.Location = new System.Drawing.Point(46, 569);
             this.tb_hexaddr.Name = "tb_hexaddr";
             this.tb_hexaddr.Size = new System.Drawing.Size(58, 20);
             this.tb_hexaddr.TabIndex = 41;
-            this.tb_hexaddr.Text = "8000";
+            this.tb_hexaddr.Text = "8800";
             this.tb_hexaddr.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tb_hexaddr_KeyUp);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(196, 171);
+            this.label5.Location = new System.Drawing.Point(12, 572);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 13);
             this.label5.TabIndex = 30;
@@ -740,6 +757,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_host_lane
             // 
+            this.btn_host_lane.Enabled = false;
             this.btn_host_lane.Location = new System.Drawing.Point(871, 367);
             this.btn_host_lane.Name = "btn_host_lane";
             this.btn_host_lane.Size = new System.Drawing.Size(133, 23);
@@ -750,6 +768,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_write_host_lane
             // 
+            this.btn_write_host_lane.Enabled = false;
             this.btn_write_host_lane.Location = new System.Drawing.Point(871, 406);
             this.btn_write_host_lane.Name = "btn_write_host_lane";
             this.btn_write_host_lane.Size = new System.Drawing.Size(133, 23);
@@ -904,6 +923,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_write_mod_VR
             // 
+            this.btn_write_mod_VR.Enabled = false;
             this.btn_write_mod_VR.Location = new System.Drawing.Point(192, 112);
             this.btn_write_mod_VR.Name = "btn_write_mod_VR";
             this.btn_write_mod_VR.Size = new System.Drawing.Size(133, 23);
@@ -914,6 +934,7 @@ namespace FiberTreid_CFP_Reader
             // 
             // btn_cfp_VR1
             // 
+            this.btn_cfp_VR1.Enabled = false;
             this.btn_cfp_VR1.Location = new System.Drawing.Point(192, 73);
             this.btn_cfp_VR1.Name = "btn_cfp_VR1";
             this.btn_cfp_VR1.Size = new System.Drawing.Size(133, 23);
@@ -987,43 +1008,60 @@ namespace FiberTreid_CFP_Reader
             this.file_save.Text = "File save...";
             this.file_save.Click += new System.EventHandler(this.file_save_Click);
             // 
-            // desc
+            // label6
             // 
-            this.desc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.desc.HeaderText = "Desc";
-            this.desc.Name = "desc";
-            this.desc.ReadOnly = true;
-            this.desc.Width = 57;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(111, 572);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 13);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "data";
             // 
-            // Column2
+            // tb_read_data
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "addr";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 53;
+            this.tb_read_data.AcceptsReturn = true;
+            this.tb_read_data.Location = new System.Drawing.Point(145, 568);
+            this.tb_read_data.Name = "tb_read_data";
+            this.tb_read_data.Size = new System.Drawing.Size(58, 20);
+            this.tb_read_data.TabIndex = 41;
+            this.tb_read_data.TextChanged += new System.EventHandler(this.tb_read_data_TextChanged);
             // 
-            // data
+            // t_st_stLBL_mod_abs
             // 
-            this.data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.data.HeaderText = "hex";
-            this.data.Name = "data";
-            this.data.Width = 49;
+            this.t_st_stLBL_mod_abs.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.t_st_stLBL_mod_abs.Enabled = false;
+            this.t_st_stLBL_mod_abs.Name = "t_st_stLBL_mod_abs";
+            this.t_st_stLBL_mod_abs.Size = new System.Drawing.Size(55, 17);
+            this.t_st_stLBL_mod_abs.Text = "mod_abs";
             // 
-            // Column4
+            // timer1
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "ASCII";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 59;
+            this.timer1.Interval = 300;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // ch_b_reset
+            // 
+            this.ch_b_reset.AutoSize = true;
+            this.ch_b_reset.Enabled = false;
+            this.ch_b_reset.Location = new System.Drawing.Point(433, 570);
+            this.ch_b_reset.Name = "ch_b_reset";
+            this.ch_b_reset.Size = new System.Drawing.Size(77, 17);
+            this.ch_b_reset.TabIndex = 51;
+            this.ch_b_reset.Text = "reset MOD";
+            this.ch_b_reset.UseVisualStyleBackColor = true;
+            this.ch_b_reset.CheckedChanged += new System.EventHandler(this.ch_b_reset_CheckedChanged);
             // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 619);
-            this.Controls.Add(this.tb_status);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.ch_b_reset);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tb_read_data);
+            this.Controls.Add(this.tb_hexaddr);
+            this.Controls.Add(this.btn_read_one);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.dtg_host_lane);
             this.Controls.Add(this.dtg_net_lane);
@@ -1031,7 +1069,6 @@ namespace FiberTreid_CFP_Reader
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btn_stat_write);
             this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.btn_stat_read);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox10);
@@ -1074,8 +1111,6 @@ namespace FiberTreid_CFP_Reader
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_cfp_nvr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_net_lane)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_vendor)).EndInit();
             this.groupBox4.ResumeLayout(false);
@@ -1163,9 +1198,6 @@ namespace FiberTreid_CFP_Reader
         private Button btn_write_netw_nvr;
         private TextBox textBox3;
         private TextBox textBox4;
-        private TextBox tb_status;
-        private Label label13;
-        private Button btn_stat_read;
         private Button btn_stat_write;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel status_lbl;
@@ -1223,6 +1255,11 @@ namespace FiberTreid_CFP_Reader
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn data;
         private DataGridViewTextBoxColumn Column4;
+        private Label label6;
+        private TextBox tb_read_data;
+        private ToolStripStatusLabel t_st_stLBL_mod_abs;
+        private Timer timer1;
+        private CheckBox ch_b_reset;
     }
 }
 
