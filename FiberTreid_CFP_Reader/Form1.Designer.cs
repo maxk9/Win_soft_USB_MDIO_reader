@@ -70,6 +70,7 @@ namespace FiberTreid_CFP_Reader
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.status_lbl = new System.Windows.Forms.ToolStripStatusLabel();
             this.pr_bar = new System.Windows.Forms.ToolStripProgressBar();
+            this.t_st_stLBL_mod_abs = new System.Windows.Forms.ToolStripStatusLabel();
             this.status_date = new System.Windows.Forms.ToolStripStatusLabel();
             this.dtg_cfp_nvr = new System.Windows.Forms.DataGridView();
             this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -125,7 +126,6 @@ namespace FiberTreid_CFP_Reader
             this.file_save = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.tb_read_data = new System.Windows.Forms.TextBox();
-            this.t_st_stLBL_mod_abs = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ch_b_reset = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel1.SuspendLayout();
@@ -417,7 +417,7 @@ namespace FiberTreid_CFP_Reader
             this.btn_stat_write.Location = new System.Drawing.Point(362, 566);
             this.btn_stat_write.Name = "btn_stat_write";
             this.btn_stat_write.Size = new System.Drawing.Size(46, 23);
-            this.btn_stat_write.TabIndex = 35;
+            this.btn_stat_write.TabIndex = 44;
             this.btn_stat_write.Text = "write";
             this.btn_stat_write.UseVisualStyleBackColor = true;
             this.btn_stat_write.Click += new System.EventHandler(this.btn_stat_write_Click);
@@ -452,6 +452,14 @@ namespace FiberTreid_CFP_Reader
             this.pr_bar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.pr_bar.Name = "pr_bar";
             this.pr_bar.Size = new System.Drawing.Size(200, 16);
+            // 
+            // t_st_stLBL_mod_abs
+            // 
+            this.t_st_stLBL_mod_abs.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.t_st_stLBL_mod_abs.Enabled = false;
+            this.t_st_stLBL_mod_abs.Name = "t_st_stLBL_mod_abs";
+            this.t_st_stLBL_mod_abs.Size = new System.Drawing.Size(55, 17);
+            this.t_st_stLBL_mod_abs.Text = "mod_abs";
             // 
             // status_date
             // 
@@ -579,7 +587,7 @@ namespace FiberTreid_CFP_Reader
             this.btn_read_one.Location = new System.Drawing.Point(209, 566);
             this.btn_read_one.Name = "btn_read_one";
             this.btn_read_one.Size = new System.Drawing.Size(133, 23);
-            this.btn_read_one.TabIndex = 0;
+            this.btn_read_one.TabIndex = 43;
             this.btn_read_one.Text = "read";
             this.btn_read_one.UseVisualStyleBackColor = true;
             this.btn_read_one.Click += new System.EventHandler(this.btn_read_one_Click_1);
@@ -591,7 +599,7 @@ namespace FiberTreid_CFP_Reader
             this.tb_hexaddr.Name = "tb_hexaddr";
             this.tb_hexaddr.Size = new System.Drawing.Size(58, 20);
             this.tb_hexaddr.TabIndex = 41;
-            this.tb_hexaddr.Text = "8800";
+            this.tb_hexaddr.Text = "a004";
             this.tb_hexaddr.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tb_hexaddr_KeyUp);
             // 
             // label5
@@ -1023,16 +1031,8 @@ namespace FiberTreid_CFP_Reader
             this.tb_read_data.Location = new System.Drawing.Point(145, 568);
             this.tb_read_data.Name = "tb_read_data";
             this.tb_read_data.Size = new System.Drawing.Size(58, 20);
-            this.tb_read_data.TabIndex = 41;
+            this.tb_read_data.TabIndex = 42;
             this.tb_read_data.TextChanged += new System.EventHandler(this.tb_read_data_TextChanged);
-            // 
-            // t_st_stLBL_mod_abs
-            // 
-            this.t_st_stLBL_mod_abs.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.t_st_stLBL_mod_abs.Enabled = false;
-            this.t_st_stLBL_mod_abs.Name = "t_st_stLBL_mod_abs";
-            this.t_st_stLBL_mod_abs.Size = new System.Drawing.Size(55, 17);
-            this.t_st_stLBL_mod_abs.Text = "mod_abs";
             // 
             // timer1
             // 
