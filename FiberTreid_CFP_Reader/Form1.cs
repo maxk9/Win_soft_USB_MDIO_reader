@@ -348,8 +348,6 @@ namespace FiberTreid_CFP_Reader
 			{
 				try
 				{
-					
-
 					string strr = "   ", str_label = "";
 					int count_word = 0xff + 1, sub_cnt = 25, addr;
 					//int count_word = 0x01;
@@ -1719,7 +1717,6 @@ namespace FiberTreid_CFP_Reader
 					//MessageBox.Show(ex.ToString());
 				}
 			}
-
 		}
 
 		private void btn_write_ven_nvr_Click(object sender, EventArgs e)
